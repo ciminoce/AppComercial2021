@@ -29,9 +29,9 @@ namespace AppComercial2021.Windows
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.IngredientesTabControl = new System.Windows.Forms.TabControl();
             this.RellenosTabPage = new System.Windows.Forms.TabPage();
@@ -67,6 +67,7 @@ namespace AppComercial2021.Windows
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.CerrarChocolatesToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.ChocolatesDataGridView = new System.Windows.Forms.DataGridView();
+            this.colChocolate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ChocolateTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.NuecesTabPage = new System.Windows.Forms.TabPage();
@@ -84,10 +85,9 @@ namespace AppComercial2021.Windows
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
             this.CerrarNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.NuecesDataGridView = new System.Windows.Forms.DataGridView();
+            this.colNuez = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NuezTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.colChocolate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNuez = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IngredientesTabControl.SuspendLayout();
             this.RellenosTabPage.SuspendLayout();
             this.RellenosToolStrip.SuspendLayout();
@@ -187,6 +187,7 @@ namespace AppComercial2021.Windows
             this.NuevoRellenoToolStripButton.Size = new System.Drawing.Size(73, 59);
             this.NuevoRellenoToolStripButton.Text = "Nuevo";
             this.NuevoRellenoToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.NuevoRellenoToolStripButton.Click += new System.EventHandler(this.NuevoRellenoToolStripButton_Click);
             // 
             // BorrarRellenoToolStripButton
             // 
@@ -197,6 +198,7 @@ namespace AppComercial2021.Windows
             this.BorrarRellenoToolStripButton.Size = new System.Drawing.Size(73, 59);
             this.BorrarRellenoToolStripButton.Text = "Borrar";
             this.BorrarRellenoToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BorrarRellenoToolStripButton.Click += new System.EventHandler(this.BorrarRellenoToolStripButton_Click);
             // 
             // EditarRellenoToolStripButton
             // 
@@ -222,6 +224,7 @@ namespace AppComercial2021.Windows
             this.OKRellenoToolStripButton.Size = new System.Drawing.Size(73, 47);
             this.OKRellenoToolStripButton.Text = "OK";
             this.OKRellenoToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.OKRellenoToolStripButton.Click += new System.EventHandler(this.OKRellenoToolStripButton_Click);
             // 
             // CancelarRellenoToolStripButton
             // 
@@ -232,6 +235,7 @@ namespace AppComercial2021.Windows
             this.CancelarRellenoToolStripButton.Size = new System.Drawing.Size(73, 47);
             this.CancelarRellenoToolStripButton.Text = "Cancelar";
             this.CancelarRellenoToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.CancelarRellenoToolStripButton.Click += new System.EventHandler(this.CancelarRellenoToolStripButton_Click);
             // 
             // toolStripSeparator2
             // 
@@ -259,7 +263,7 @@ namespace AppComercial2021.Windows
             this.CerrarRellenoToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.CerrarRellenoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.CerrarRellenoToolStripButton.Name = "CerrarRellenoToolStripButton";
-            this.CerrarRellenoToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.CerrarRellenoToolStripButton.Size = new System.Drawing.Size(44, 59);
             this.CerrarRellenoToolStripButton.Text = "Cerrar";
             this.CerrarRellenoToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.CerrarRellenoToolStripButton.Click += new System.EventHandler(this.CerrarRellenoToolStripButton_Click);
@@ -284,8 +288,8 @@ namespace AppComercial2021.Windows
             // colRelleno
             // 
             this.colRelleno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colRelleno.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colRelleno.DefaultCellStyle = dataGridViewCellStyle10;
             this.colRelleno.HeaderText = "Relleno";
             this.colRelleno.Name = "colRelleno";
             this.colRelleno.ReadOnly = true;
@@ -440,7 +444,7 @@ namespace AppComercial2021.Windows
             this.CerrarChocolatesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.CerrarChocolatesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.CerrarChocolatesToolStripButton.Name = "CerrarChocolatesToolStripButton";
-            this.CerrarChocolatesToolStripButton.Size = new System.Drawing.Size(44, 59);
+            this.CerrarChocolatesToolStripButton.Size = new System.Drawing.Size(73, 59);
             this.CerrarChocolatesToolStripButton.Text = "Cerrar";
             this.CerrarChocolatesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.CerrarChocolatesToolStripButton.Click += new System.EventHandler(this.CerrarChocolatesToolStripButton_Click);
@@ -457,6 +461,15 @@ namespace AppComercial2021.Windows
             this.ChocolatesDataGridView.ReadOnly = true;
             this.ChocolatesDataGridView.Size = new System.Drawing.Size(371, 420);
             this.ChocolatesDataGridView.TabIndex = 5;
+            // 
+            // colChocolate
+            // 
+            this.colChocolate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colChocolate.DefaultCellStyle = dataGridViewCellStyle11;
+            this.colChocolate.HeaderText = "Chocolate";
+            this.colChocolate.Name = "colChocolate";
+            this.colChocolate.ReadOnly = true;
             // 
             // ChocolateTextBox
             // 
@@ -607,7 +620,7 @@ namespace AppComercial2021.Windows
             this.CerrarNuecesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.CerrarNuecesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.CerrarNuecesToolStripButton.Name = "CerrarNuecesToolStripButton";
-            this.CerrarNuecesToolStripButton.Size = new System.Drawing.Size(44, 59);
+            this.CerrarNuecesToolStripButton.Size = new System.Drawing.Size(73, 59);
             this.CerrarNuecesToolStripButton.Text = "Cerrar";
             this.CerrarNuecesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.CerrarNuecesToolStripButton.Click += new System.EventHandler(this.CerrarNuecesToolStripButton_Click);
@@ -625,6 +638,15 @@ namespace AppComercial2021.Windows
             this.NuecesDataGridView.Size = new System.Drawing.Size(371, 415);
             this.NuecesDataGridView.TabIndex = 8;
             // 
+            // colNuez
+            // 
+            this.colNuez.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colNuez.DefaultCellStyle = dataGridViewCellStyle12;
+            this.colNuez.HeaderText = "Nuez";
+            this.colNuez.Name = "colNuez";
+            this.colNuez.ReadOnly = true;
+            // 
             // NuezTextBox
             // 
             this.NuezTextBox.Location = new System.Drawing.Point(168, 33);
@@ -640,24 +662,6 @@ namespace AppComercial2021.Windows
             this.label4.Size = new System.Drawing.Size(91, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "Tipo de Nuez::";
-            // 
-            // colChocolate
-            // 
-            this.colChocolate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colChocolate.DefaultCellStyle = dataGridViewCellStyle8;
-            this.colChocolate.HeaderText = "Chocolate";
-            this.colChocolate.Name = "colChocolate";
-            this.colChocolate.ReadOnly = true;
-            // 
-            // colNuez
-            // 
-            this.colNuez.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colNuez.DefaultCellStyle = dataGridViewCellStyle9;
-            this.colNuez.HeaderText = "Nuez";
-            this.colNuez.Name = "colNuez";
-            this.colNuez.ReadOnly = true;
             // 
             // FrmIngredientes
             // 

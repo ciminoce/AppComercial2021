@@ -15,7 +15,7 @@ namespace AppComercial2021.Datos
 
         public RepositorioTipoDeRelleno()
         {
-            
+
         }
 
         public List<TipoRelleno> GetLista()
@@ -38,25 +38,22 @@ namespace AppComercial2021.Datos
 
                 reader.Close();
             }
-            catch (SqlException ex)
-            {
-                throw new Exception("Error al crear o abrir la conexión");
-            }
             catch (Exception ex)
             {
-                throw new Exception("Error al intentar leer los datos de la tabla de Rellenos");
+                throw new Exception("Error al intentar leer los datos de la tabla de Rellenos o al establecer la conexión");
             }
             finally
             {
-                if (comando!=null)
+                if (comando != null)
                 {
                     if (comando.Connection.State == ConnectionState.Open)
                     {
                         comando.Connection.Close();
-
+                        comando.Connection.Dispose();
                     }
 
-                }            }
+                }
+            }
 
             return lista;
         }
@@ -69,6 +66,60 @@ namespace AppComercial2021.Datos
                 TipoRellenoId = reader.GetInt32(0),
                 Descripcion = reader.GetString(1)
             };
+        }
+
+        public int Agregar(TipoRelleno tipoRelleno)
+        {
+            int registrosAfectados = 0;
+            try
+            {
+                conexionBd = new ConexionBd();
+                var cn = conexionBd.GetConexion();
+                string cadenaComando = "INSERT INTO TipoDeRellenos VALUES (@desc)";
+                var comando = new SqlCommand(cadenaComando, cn);
+                comando.Parameters.AddWithValue("@desc", tipoRelleno.Descripcion);
+                cn.Open();
+                registrosAfectados = comando.ExecuteNonQuery();
+                cadenaComando = "SELECT @@IDENTITY";
+                comando = new SqlCommand(cadenaComando, cn);
+                tipoRelleno.TipoRellenoId=(int)(decimal)comando.ExecuteScalar();
+                cn.Close();
+                cn.Dispose();
+                return registrosAfectados;
+
+            }
+            catch (Exception e)
+            {
+                if (e.Message.Contains("IX_"))
+                {
+                    throw new Exception("Registro repetido");
+                }
+                throw new Exception(e.Message);
+            }
+        }
+
+        public int Borrar(int tipoRellenoId)
+        {
+            int registrosAfectados = 0;
+            try
+            {
+                conexionBd = new ConexionBd();
+                var cn = conexionBd.GetConexion();
+                string cadenaComando = "DELETE FROM TipoDeRellenos WHERE TipoRellenoId=@id";
+                var comando = new SqlCommand(cadenaComando, cn);
+                comando.Parameters.AddWithValue("@id", tipoRellenoId);
+                cn.Open();
+                registrosAfectados = comando.ExecuteNonQuery();
+                cn.Close();
+                cn.Dispose();
+                return registrosAfectados;
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+
         }
     }
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppComercial2021.Entidades.Entidades;
 using AppComercial2021.Servicios;
+using AppComercial2021.Windows.Helpers;
 
 namespace AppComercial2021.Windows
 {
@@ -46,40 +47,21 @@ namespace AppComercial2021.Windows
 
         private void MostrarDatosRellenosEnGrilla()
         {
-            RellenosDataGridView.Rows.Clear();
+            HelperGrid.LimpiarGrilla(RellenosDataGridView);
             foreach (var relleno in listaRellenos)
             {
-                DataGridViewRow r = ConstruirFilaRelleno();
-                SetearFilaRelleno(r, relleno);
-                AgregarFila(r);
+                DataGridViewRow r = HelperGrid.ConstruirFila(RellenosDataGridView);
+                HelperGrid.SetearFila(r, relleno);
+                HelperGrid.AgregarFila(RellenosDataGridView,r);
             }
-        }
-
-        private void AgregarFila(DataGridViewRow r)
-        {
-            RellenosDataGridView.Rows.Add(r);
-        }
-
-        private void SetearFilaRelleno(DataGridViewRow r, TipoRelleno relleno)
-        {
-            r.Cells[colRelleno.Index].Value = relleno.Descripcion;
-
-            r.Tag = relleno;
-        }
-
-        
-
-        private DataGridViewRow ConstruirFilaRelleno()
-        {
-            DataGridViewRow r=new DataGridViewRow();
-            r.CreateCells(RellenosDataGridView);
-            return r;
         }
         private void ManejarBotonesNueces(bool habilitado)
         {
             CargarNuecesToolStripButton.Enabled = habilitado;
             NuevoNuecesToolStripButton.Enabled = habilitado;
             BorrarNuecesToolStripButton.Enabled = habilitado;
+            EditarNuecesToolStripButton.Enabled = habilitado;
+
             OKNuecesToolStripButton.Enabled = !habilitado;
             CancelarNuecesToolStripButton.Enabled = !habilitado;
             ImprimirNuecesToolStripButton.Enabled = habilitado;
@@ -91,6 +73,8 @@ namespace AppComercial2021.Windows
             CargarRellenosToolStripButton.Enabled = habilitado;
             NuevoRellenoToolStripButton.Enabled = habilitado;
             BorrarRellenoToolStripButton.Enabled = habilitado;
+            EditarRellenoToolStripButton.Enabled = habilitado;
+
             OKRellenoToolStripButton.Enabled = !habilitado;
             CancelarRellenoToolStripButton.Enabled = !habilitado;
             ImprimirRellenoToolStripButton.Enabled = habilitado;
@@ -101,6 +85,8 @@ namespace AppComercial2021.Windows
             CargarChocolatesToolStripButton.Enabled = habilitado;
             NuevoChocolateToolStripButton.Enabled = habilitado;
             BorrarChocolateToolStripButton.Enabled = habilitado;
+            EditarChocolateToolStripButton.Enabled = habilitado;
+
             OKChocolatesToolStripButton.Enabled = !habilitado;
             CancelarChocolatesToolStripButton.Enabled = !habilitado;
             ImprimirChocolatesToolStripButton.Enabled = habilitado;
@@ -112,6 +98,9 @@ namespace AppComercial2021.Windows
             ManejarBotonesRellenos(true);
             ManejarBotonesChocolates(true);
             ManejarBotonesNueces(true);
+
+            HabilitarTextBoxRellenos(false);
+
         }
 
         private void CerrarRellenoToolStripButton_Click(object sender, EventArgs e)
@@ -137,33 +126,13 @@ namespace AppComercial2021.Windows
 
         private void MostrarDatosChocolatesEnGrilla()
         {
-            ChocolatesDataGridView.Rows.Clear();
+            HelperGrid.LimpiarGrilla(ChocolatesDataGridView);
             foreach (var chocolate  in listaChocolates)
             {
-                DataGridViewRow r = ConstruirFilaChocolate();
-                SetearFilaChocolate(r, chocolate);
-                AgregarFilaChocolate(r);
+                DataGridViewRow r = HelperGrid.ConstruirFila(ChocolatesDataGridView);
+                HelperGrid.SetearFila(r, chocolate);
+                HelperGrid.AgregarFila(ChocolatesDataGridView,r);
             }
-        }
-
-        private void AgregarFilaChocolate(DataGridViewRow r)
-        {
-            ChocolatesDataGridView.Rows.Add(r);
-        }
-
-        private void SetearFilaChocolate(DataGridViewRow r, TipoChocolate chocolate)
-        {
-            r.Cells[colChocolate.Index].Value = chocolate.Descripcion;
-
-            r.Tag = chocolate;
-
-        }
-
-        private DataGridViewRow ConstruirFilaChocolate()
-        {
-            DataGridViewRow r = new DataGridViewRow();
-            r.CreateCells(ChocolatesDataGridView);
-            return r;
         }
 
         private void CargarNuecesToolStripButton_Click(object sender, EventArgs e)
@@ -184,34 +153,16 @@ namespace AppComercial2021.Windows
 
         private void MostrarDatosNuecesEnGrilla()
         {
-            NuecesDataGridView.Rows.Clear();
+            HelperGrid.LimpiarGrilla(NuecesDataGridView);
             foreach (var nuez in listaNueces)
             {
-                DataGridViewRow r = ConstruirFilaNuez();
-                SetearFilaNuez(r, nuez);
-                AgregarFilaNueces(r);
+                DataGridViewRow r = HelperGrid.ConstruirFila(NuecesDataGridView);
+                HelperGrid.SetearFila(r, nuez);
+                HelperGrid.AgregarFila(NuecesDataGridView,r);
             }
 
         }
 
-        private void AgregarFilaNueces(DataGridViewRow r)
-        {
-            NuecesDataGridView.Rows.Add(r);
-        }
-
-        private DataGridViewRow ConstruirFilaNuez()
-        {
-            DataGridViewRow r = new DataGridViewRow();
-            r.CreateCells(NuecesDataGridView);
-            return r;
-        }
-
-        private void SetearFilaNuez(DataGridViewRow r, TipoNuez nuez)
-        {
-            r.Cells[colNuez.Index].Value = nuez.Descripcion;
-
-            r.Tag = nuez;
-        }
 
         private void CerrarNuecesToolStripButton_Click(object sender, EventArgs e)
         {
@@ -221,6 +172,91 @@ namespace AppComercial2021.Windows
         private void CerrarChocolatesToolStripButton_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void HabilitarTextBoxRellenos(bool habilitado)
+        {
+            RellenoTextBox.Enabled = habilitado;
+        }
+
+        private void NuevoRellenoToolStripButton_Click(object sender, EventArgs e)
+        {
+            HabilitarTextBoxRellenos(true);
+            ManejarBotonesRellenos(false);
+            RellenoTextBox.Focus();
+        }
+
+        private void CancelarRellenoToolStripButton_Click(object sender, EventArgs e)
+        {
+            RellenoTextBox.Clear();
+            HabilitarTextBoxRellenos(false);
+            ManejarBotonesRellenos(true);
+        }
+
+        private void OKRellenoToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                servicioRellenos = new ServicioTipoDeRelleno();
+                //TODO:Validar el Objeto
+                TipoRelleno tipoRelleno = new TipoRelleno()
+                {
+                    Descripcion = RellenoTextBox.Text
+                };
+                int registrosGuardados= servicioRellenos.Agregar(tipoRelleno);
+                MessageBox.Show($"Se agregaron {registrosGuardados} registro/s", "Mensaje", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                if (registrosGuardados==0)
+                {
+                    return;
+                }
+
+                DataGridViewRow r = HelperGrid.ConstruirFila(RellenosDataGridView);
+                HelperGrid.SetearFila(r,tipoRelleno);
+                HelperGrid.AgregarFila(RellenosDataGridView, r);
+                RellenoTextBox.Clear();
+                ManejarBotonesRellenos(true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BorrarRellenoToolStripButton_Click(object sender, EventArgs e)
+        {
+            if (RellenosDataGridView.SelectedRows.Count==0)
+            {
+                return;
+            }
+
+            DataGridViewRow r = RellenosDataGridView.SelectedRows[0];
+            TipoRelleno tipoRelleno =(TipoRelleno) r.Tag;
+            DialogResult dr = MessageBox.Show("¿Desea borrar el registro seleccionado?", "Confirmar",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (dr==DialogResult.Yes)
+            {
+                try
+                {
+                    int registrosBorrados = servicioRellenos.Borrar(tipoRelleno.TipoRellenoId);
+                    MessageBox.Show($"Se borraron {registrosBorrados} registro/s", "Mensaje", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                    if (registrosBorrados == 0)
+                    {
+                        return;
+                    }
+
+                    HelperGrid.QuitarFila(RellenosDataGridView, r);
+                    ManejarBotonesRellenos(true);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
         }
     }
 }

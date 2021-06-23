@@ -30,5 +30,34 @@ namespace AppComercial2021.Servicios
                 throw new Exception(ex.Message);
             }
         }
+
+        public int Agregar(TipoRelleno tipoRelleno)
+        {
+            try
+            {
+                repositorio = new RepositorioTipoDeRelleno();
+                return repositorio.Agregar(tipoRelleno);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
+        public int Borrar(int tipoRellenoId)
+        {
+            try
+            {
+                repositorio = new RepositorioTipoDeRelleno();
+                return repositorio.Borrar(tipoRellenoId);
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
     }
 }
