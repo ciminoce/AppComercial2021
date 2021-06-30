@@ -20,33 +20,34 @@ namespace AppComercial2021.Datos
         public List<TipoChocolate> GetLista()
         {
             List<TipoChocolate> lista = new List<TipoChocolate>();
-            SqlCommand comando = null;
+           
             try
             {
-                conexionBd = new ConexionBd();
-                var cn = conexionBd.GetConexion();
-                cn.Open();
-                string cadenaComando = "SELECT TipoChocolateId, Descripcion FROM TipoDeChocolates";
-                comando = new SqlCommand(cadenaComando, cn);
-                SqlDataReader reader = comando.ExecuteReader();
-                while (reader.Read())
+                using (var cn = ConexionBd.GetInstancia().GetConexion())
                 {
-                    var tipo = ConstruirTipo(reader);
-                    lista.Add(tipo);
-                }
+                    string cadenaComando = "SELECT TipoChocolateId, Descripcion FROM TipoDeChocolates";
+                    using (var comando = new SqlCommand(cadenaComando, cn))
+                    {
+                        using (var reader = comando.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                var tipo = ConstruirTipo(reader);
+                                lista.Add(tipo);
+                            }
+                        }
 
-                reader.Close();
+                    }
+
+                }
+                return lista;
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
-            finally
-            {
-                comando.Connection.Close();
-            }
 
-            return lista;
+            
         }
 
 

@@ -44,6 +44,7 @@
     <Compile Include="Entidades\TipoChocolate.cs" />
     <Compile Include="Entidades\TipoNuez.cs" />
     <Compile Include="Entidades\TipoRelleno.cs" />
+    <Compile Include="Enums\OperacionesBd.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

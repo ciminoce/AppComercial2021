@@ -29,9 +29,10 @@ namespace AppComercial2021.Windows
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.IngredientesTabControl = new System.Windows.Forms.TabControl();
             this.RellenosTabPage = new System.Windows.Forms.TabPage();
@@ -88,6 +89,7 @@ namespace AppComercial2021.Windows
             this.colNuez = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NuezTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.IngredientesTabControl.SuspendLayout();
             this.RellenosTabPage.SuspendLayout();
             this.RellenosToolStrip.SuspendLayout();
@@ -98,6 +100,7 @@ namespace AppComercial2021.Windows
             this.NuecesTabPage.SuspendLayout();
             this.NuecesToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NuecesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -209,6 +212,7 @@ namespace AppComercial2021.Windows
             this.EditarRellenoToolStripButton.Size = new System.Drawing.Size(73, 59);
             this.EditarRellenoToolStripButton.Text = "Editar";
             this.EditarRellenoToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.EditarRellenoToolStripButton.Click += new System.EventHandler(this.EditarRellenoToolStripButton_Click);
             // 
             // toolStripSeparator1
             // 
@@ -288,8 +292,8 @@ namespace AppComercial2021.Windows
             // colRelleno
             // 
             this.colRelleno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colRelleno.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colRelleno.DefaultCellStyle = dataGridViewCellStyle4;
             this.colRelleno.HeaderText = "Relleno";
             this.colRelleno.Name = "colRelleno";
             this.colRelleno.ReadOnly = true;
@@ -465,8 +469,8 @@ namespace AppComercial2021.Windows
             // colChocolate
             // 
             this.colChocolate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colChocolate.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colChocolate.DefaultCellStyle = dataGridViewCellStyle5;
             this.colChocolate.HeaderText = "Chocolate";
             this.colChocolate.Name = "colChocolate";
             this.colChocolate.ReadOnly = true;
@@ -641,8 +645,8 @@ namespace AppComercial2021.Windows
             // colNuez
             // 
             this.colNuez.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colNuez.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colNuez.DefaultCellStyle = dataGridViewCellStyle6;
             this.colNuez.HeaderText = "Nuez";
             this.colNuez.Name = "colNuez";
             this.colNuez.ReadOnly = true;
@@ -662,6 +666,10 @@ namespace AppComercial2021.Windows
             this.label4.Size = new System.Drawing.Size(91, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "Tipo de Nuez::";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // FrmIngredientes
             // 
@@ -691,6 +699,7 @@ namespace AppComercial2021.Windows
             this.NuecesToolStrip.ResumeLayout(false);
             this.NuecesToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NuecesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -753,5 +762,6 @@ namespace AppComercial2021.Windows
         private System.Windows.Forms.DataGridViewTextBoxColumn colRelleno;
         private System.Windows.Forms.DataGridViewTextBoxColumn colChocolate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNuez;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

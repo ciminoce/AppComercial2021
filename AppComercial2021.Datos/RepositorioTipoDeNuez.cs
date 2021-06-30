@@ -10,9 +10,19 @@ namespace AppComercial2021.Datos
 {
     public class RepositorioTipoDeNuez
     {
-        private ConexionBd conexionBd;
+        public static RepositorioTipoDeNuez instancia;
 
-        public RepositorioTipoDeNuez()
+        public static RepositorioTipoDeNuez GetInstancia()
+        {
+            if (instancia==null)
+            {
+                instancia = new RepositorioTipoDeNuez();
+            }
+
+            return instancia;
+        }
+
+        private RepositorioTipoDeNuez()
         {
 
         }
@@ -20,30 +30,31 @@ namespace AppComercial2021.Datos
         public List<TipoNuez> GetLista()
         {
             List<TipoNuez> lista = new List<TipoNuez>();
-            SqlCommand comando = null;
+            
             try
             {
-                conexionBd = new ConexionBd();
-                var cn = conexionBd.GetConexion();
-                cn.Open();
-                string cadenaComando = "SELECT TipoNuezId, Descripcion FROM TipoDeNueces";
-                comando = new SqlCommand(cadenaComando, cn);
-                SqlDataReader reader = comando.ExecuteReader();
-                while (reader.Read())
+                using (var cn = ConexionBd.GetInstancia().GetConexion())
                 {
-                    var tipo = ConstruirTipo(reader);
-                    lista.Add(tipo);
-                }
+                    string cadenaComando = "SELECT TipoNuezId, Descripcion FROM TipoDeNueces";
+                    using (var comando = new SqlCommand(cadenaComando, cn))
+                    {
+                        using (var reader = comando.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                var tipo = ConstruirTipo(reader);
+                                lista.Add(tipo);
+                            }
 
-                reader.Close();
+                        }
+
+                    }
+                 
+                }
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
-            }
-            finally
-            {
-                comando.Connection.Close();
             }
 
             return lista;

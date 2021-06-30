@@ -20,7 +20,7 @@ namespace AppComercial2021.Servicios
         {
             try
             {
-                repositorio = new RepositorioTipoDeNuez();
+                repositorio = RepositorioTipoDeNuez.GetInstancia();
                 var lista = repositorio.GetLista();
                 return lista;
             }

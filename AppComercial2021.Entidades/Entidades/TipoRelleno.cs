@@ -10,5 +10,16 @@ namespace AppComercial2021.Entidades.Entidades
     {
         public int TipoRellenoId { get; set; }
         public string Descripcion { get; set; }
+
+        public bool Validar()
+        {
+            bool esValido = true;
+            if (string.IsNullOrEmpty(Descripcion) || string.IsNullOrWhiteSpace(Descripcion))
+            {
+                esValido = false;
+            }
+
+            return esValido;
+        }
     }
 }
