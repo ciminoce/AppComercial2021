@@ -8,10 +8,10 @@ using AppComercial2021.Entidades.Entidades;
 
 namespace AppComercial2021.Servicios
 {
-    public class ServicioTipoDeNuez
+    public class ServicioTipoNuez
     {
-        private RepositorioTipoDeNuez repositorio;
-        public ServicioTipoDeNuez()
+        private RepositorioTipoNuez repositorio;
+        public ServicioTipoNuez()
         {
 
         }
@@ -20,7 +20,7 @@ namespace AppComercial2021.Servicios
         {
             try
             {
-                repositorio = RepositorioTipoDeNuez.GetInstancia();
+                repositorio = RepositorioTipoNuez.GetInstancia();
                 var lista = repositorio.GetLista();
                 return lista;
             }

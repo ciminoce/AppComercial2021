@@ -10,6 +10,7 @@ namespace AppComercial2021.Entidades.Entidades
     {
         public int TipoRellenoId { get; set; }
         public string Descripcion { get; set; }
+        public byte[] RowVersion { get; set; }
 
         public bool Validar()
         {

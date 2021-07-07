@@ -8,11 +8,11 @@ using AppComercial2021.Entidades.Entidades;
 
 namespace AppComercial2021.Datos
 {
-    public class RepositorioTipoDeChocolate
+    public class RepositorioTipoChocolate
     {
         private ConexionBd conexionBd;
 
-        public RepositorioTipoDeChocolate()
+        public RepositorioTipoChocolate()
         {
 
         }
@@ -25,7 +25,7 @@ namespace AppComercial2021.Datos
             {
                 using (var cn = ConexionBd.GetInstancia().GetConexion())
                 {
-                    string cadenaComando = "SELECT TipoChocolateId, Descripcion FROM TipoDeChocolates";
+                    string cadenaComando = "SELECT TipoChocolateId, Descripcion FROM TipoChocolates";
                     using (var comando = new SqlCommand(cadenaComando, cn))
                     {
                         using (var reader = comando.ExecuteReader())

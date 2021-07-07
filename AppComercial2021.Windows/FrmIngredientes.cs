@@ -21,9 +21,9 @@ namespace AppComercial2021.Windows
             InitializeComponent();
         }
 
-        private ServicioTipoDeRelleno servicioRellenos;
-        private ServicioTipoDeChocolate servicioChocolate;
-        private ServicioTipoDeNuez servicioNuez;
+        private ServicioTipoRelleno servicioRellenos;
+        private ServicioTipoChocolate servicioChocolate;
+        private ServicioTipoNuez servicioNuez;
 
         private List<TipoRelleno> listaRellenos;
         private List<TipoChocolate> listaChocolates;
@@ -35,19 +35,21 @@ namespace AppComercial2021.Windows
         private DataGridViewRow r;
         private void CargarRellenosToolStripButton_Click(object sender, EventArgs e)
         {
+            RecargarGrillaRellenos();
+        }
+
+        private void RecargarGrillaRellenos()
+        {
             try
             {
                 //servicioRellenos = ServicioTipoDeRelleno.GetInstancia()
-                listaRellenos = ServicioTipoDeRelleno.GetInstancia().GetLista();
+                listaRellenos = ServicioTipoRelleno.GetInstancia().GetLista();
                 MostrarDatosRellenosEnGrilla();
-
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void MostrarDatosRellenosEnGrilla()
@@ -117,7 +119,7 @@ namespace AppComercial2021.Windows
         {
             try
             {
-                servicioChocolate = new ServicioTipoDeChocolate();
+                servicioChocolate = new ServicioTipoChocolate();
                 listaChocolates = servicioChocolate.GetLista();
                 MostrarDatosChocolatesEnGrilla();
 
@@ -144,7 +146,7 @@ namespace AppComercial2021.Windows
         {
             try
             {
-                servicioNuez = new ServicioTipoDeNuez();
+                servicioNuez = new ServicioTipoNuez();
                 listaNueces = servicioNuez.GetLista();
                 MostrarDatosNuecesEnGrilla();
 
@@ -204,7 +206,6 @@ namespace AppComercial2021.Windows
         {
             try
             {
-                
                 errorProvider1.Clear();
                 if (operacion==OperacionesBd.Agregar)
                 {
@@ -215,8 +216,15 @@ namespace AppComercial2021.Windows
 
                     if (tipoRelleno.Validar())
                     {
-                        //TODO:Verificar antes que no haya duplicados
-                        int registrosGuardados = ServicioTipoDeRelleno.GetInstancia().Agregar(tipoRelleno);
+                        if (ServicioTipoRelleno.GetInstancia().Existe(tipoRelleno))
+                        {
+                            MessageBox.Show("Registro existente... Alta denegada", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            RellenoTextBox.SelectAll();
+                            RellenoTextBox.Focus();
+                            return;
+                        }
+                        int registrosGuardados = ServicioTipoRelleno.GetInstancia().Agregar(tipoRelleno);
                         MessageBox.Show($"Se agregaron {registrosGuardados} registro/s", "Mensaje", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
                         if (registrosGuardados == 0)
@@ -242,13 +250,27 @@ namespace AppComercial2021.Windows
 
                     if (tipoRelleno.Validar())
                     {
-                        int registrosGuardados = ServicioTipoDeRelleno.GetInstancia().Editar(tipoRelleno);
-                        MessageBox.Show($"Se editaron {registrosGuardados} registro/s", "Mensaje", MessageBoxButtons.OK,
-                            MessageBoxIcon.Information);
-                        if (registrosGuardados == 0)
+                        if (ServicioTipoRelleno.GetInstancia().Existe(tipoRelleno))
                         {
+                            MessageBox.Show("Registro existente... Edición denegada", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            RellenoTextBox.SelectAll();
+                            RellenoTextBox.Focus();
                             return;
                         }
+
+                        int registrosGuardados = ServicioTipoRelleno.GetInstancia().Editar(tipoRelleno);
+                        if (registrosGuardados == 0)
+                        {
+                            MessageBox.Show("Registro inexistente o modificado por otro usuario", "Mensaje", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                            RecargarGrillaRellenos();
+
+                            return;
+                        }
+                        MessageBox.Show($"Se editaron {registrosGuardados} registro/s", "Mensaje", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+
                         HelperGrid.SetearFila(r, tipoRelleno);
 
                     }
@@ -285,15 +307,29 @@ namespace AppComercial2021.Windows
             {
                 try
                 {
-                    int registrosBorrados = ServicioTipoDeRelleno.GetInstancia().Borrar(tipoRelleno.TipoRellenoId);
-                    MessageBox.Show($"Se borraron {registrosBorrados} registro/s", "Mensaje", MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-                    if (registrosBorrados == 0)
-                    {
-                        return;
-                    }
 
-                    HelperGrid.QuitarFila(RellenosDataGridView, r);
+                    if (!ServicioTipoRelleno.GetInstancia().EstaRelacionado(tipoRelleno))
+                    {
+                        int registrosBorrados = ServicioTipoRelleno.GetInstancia().Borrar(tipoRelleno);
+                        if (registrosBorrados == 0)
+                        {
+                            MessageBox.Show("Registro borrado o modificado por otro usuario", "Advertencia",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            RecargarGrillaRellenos();
+                            return;
+
+                        }
+                        MessageBox.Show($"Se borraron {registrosBorrados} registro/s", "Mensaje", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+
+                        HelperGrid.QuitarFila(RellenosDataGridView, r);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Registro relacionado... Baja denegada","Error",MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    }
                     ManejarBotonesRellenos(true);
 
                 }

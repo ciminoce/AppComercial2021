@@ -8,10 +8,10 @@ using AppComercial2021.Entidades.Entidades;
 
 namespace AppComercial2021.Servicios
 {
-    public class ServicioTipoDeChocolate
+    public class ServicioTipoChocolate
     {
-        private RepositorioTipoDeChocolate repositorio;
-        public ServicioTipoDeChocolate()
+        private RepositorioTipoChocolate repositorio;
+        public ServicioTipoChocolate()
         {
 
         }
@@ -20,7 +20,7 @@ namespace AppComercial2021.Servicios
         {
             try
             {
-                repositorio = new RepositorioTipoDeChocolate();
+                repositorio = new RepositorioTipoChocolate();
                 var lista = repositorio.GetLista();
                 return lista;
             }

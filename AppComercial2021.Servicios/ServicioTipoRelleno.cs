@@ -8,21 +8,21 @@ using AppComercial2021.Entidades.Entidades;
 
 namespace AppComercial2021.Servicios
 {
-    public class ServicioTipoDeRelleno
+    public class ServicioTipoRelleno
     {
-        private RepositorioTipoDeRelleno repositorio;
-        public static ServicioTipoDeRelleno instancia;
+        private RepositorioTipoRelleno repositorio;
+        public static ServicioTipoRelleno instancia;
 
-        public static ServicioTipoDeRelleno GetInstancia()
+        public static ServicioTipoRelleno GetInstancia()
         {
             if (instancia==null)
             {
-                instancia = new ServicioTipoDeRelleno();
+                instancia = new ServicioTipoRelleno();
             }
 
             return instancia;
         }
-        private ServicioTipoDeRelleno()
+        private ServicioTipoRelleno()
         {
             
         }
@@ -31,7 +31,7 @@ namespace AppComercial2021.Servicios
         {
             try
             {
-                repositorio = RepositorioTipoDeRelleno.GetInstancia();
+                repositorio = RepositorioTipoRelleno.GetInstancia();
                 var lista = repositorio.GetLista();
                 return lista;
             }
@@ -45,7 +45,7 @@ namespace AppComercial2021.Servicios
         {
             try
             {
-                repositorio = RepositorioTipoDeRelleno.GetInstancia();
+                repositorio = RepositorioTipoRelleno.GetInstancia();
                 return repositorio.Agregar(tipoRelleno);
             }
             catch (Exception e)
@@ -55,12 +55,35 @@ namespace AppComercial2021.Servicios
             }
         }
 
-        public int Borrar(int tipoRellenoId)
+        public bool EstaRelacionado(TipoRelleno tipoRelleno)
         {
             try
             {
-                repositorio = RepositorioTipoDeRelleno.GetInstancia();
-                return repositorio.Borrar(tipoRellenoId);
+                return RepositorioTipoRelleno.GetInstancia().EstaRelacionado(tipoRelleno);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+        }
+        public bool Existe(TipoRelleno tipoRelleno)
+        {
+            try
+            {
+                return RepositorioTipoRelleno.GetInstancia().Existe(tipoRelleno);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        public int Borrar(TipoRelleno tipoRelleno)
+        {
+            try
+            {
+                repositorio = RepositorioTipoRelleno.GetInstancia();
+                return repositorio.Borrar(tipoRelleno);
 
             }
             catch (Exception e)
@@ -74,7 +97,7 @@ namespace AppComercial2021.Servicios
         {
             try
             {
-                repositorio = RepositorioTipoDeRelleno.GetInstancia();
+                repositorio = RepositorioTipoRelleno.GetInstancia();
                 return repositorio.Editar(tipoRelleno);
 
             }

@@ -8,21 +8,21 @@ using AppComercial2021.Entidades.Entidades;
 
 namespace AppComercial2021.Datos
 {
-    public class RepositorioTipoDeNuez
+    public class RepositorioTipoNuez
     {
-        public static RepositorioTipoDeNuez instancia;
+        public static RepositorioTipoNuez instancia;
 
-        public static RepositorioTipoDeNuez GetInstancia()
+        public static RepositorioTipoNuez GetInstancia()
         {
             if (instancia==null)
             {
-                instancia = new RepositorioTipoDeNuez();
+                instancia = new RepositorioTipoNuez();
             }
 
             return instancia;
         }
 
-        private RepositorioTipoDeNuez()
+        private RepositorioTipoNuez()
         {
 
         }
@@ -35,7 +35,7 @@ namespace AppComercial2021.Datos
             {
                 using (var cn = ConexionBd.GetInstancia().GetConexion())
                 {
-                    string cadenaComando = "SELECT TipoNuezId, Descripcion FROM TipoDeNueces";
+                    string cadenaComando = "SELECT TipoNuezId, Descripcion FROM TipoNueces";
                     using (var comando = new SqlCommand(cadenaComando, cn))
                     {
                         using (var reader = comando.ExecuteReader())
