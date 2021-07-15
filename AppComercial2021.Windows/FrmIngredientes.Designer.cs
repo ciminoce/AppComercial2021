@@ -30,66 +30,66 @@ namespace AppComercial2021.Windows
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.IngredientesTabControl = new System.Windows.Forms.TabControl();
             this.RellenosTabPage = new System.Windows.Forms.TabPage();
             this.RellenosToolStrip = new System.Windows.Forms.ToolStrip();
-            this.CargarRellenosToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.NuevoRellenoToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.BorrarRellenoToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.EditarRellenoToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.OKRellenoToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.CancelarRellenoToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.ImprimirRellenoToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.CerrarRellenoToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.RellenosDataGridView = new System.Windows.Forms.DataGridView();
             this.colRelleno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RellenoTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.ChocolatesTabPage = new System.Windows.Forms.TabPage();
             this.ChocolatesToolStrip = new System.Windows.Forms.ToolStrip();
-            this.CargarChocolatesToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.NuevoChocolateToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.BorrarChocolateToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.EditarChocolateToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.OKChocolatesToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.CancelarChocolatesToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.ImprimirChocolatesToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.CerrarChocolatesToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.ChocolatesDataGridView = new System.Windows.Forms.DataGridView();
             this.colChocolate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ChocolateTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.NuecesTabPage = new System.Windows.Forms.TabPage();
             this.NuecesToolStrip = new System.Windows.Forms.ToolStrip();
-            this.CargarNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
-            this.NuevoNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.BorrarNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.EditarNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
-            this.OKNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.CancelarNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
-            this.ImprimirNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
-            this.CerrarNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.NuecesDataGridView = new System.Windows.Forms.DataGridView();
             this.colNuez = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NuezTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CargarRellenosToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.NuevoRellenoToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.BorrarRellenoToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.EditarRellenoToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.OKRellenoToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.CancelarRellenoToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.ImprimirRellenoToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.CerrarRellenoToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.CargarChocolatesToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.NuevoChocolateToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.BorrarChocolateToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.EditarChocolateToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.OKChocolatesToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.CancelarChocolatesToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.ImprimirChocolatesToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.CerrarChocolatesToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.CargarNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.NuevoNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.BorrarNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.EditarNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.OKNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.CancelarNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.ImprimirNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.CerrarNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.IngredientesTabControl.SuspendLayout();
             this.RellenosTabPage.SuspendLayout();
             this.RellenosToolStrip.SuspendLayout();
@@ -165,112 +165,25 @@ namespace AppComercial2021.Windows
             this.RellenosToolStrip.TabIndex = 10;
             this.RellenosToolStrip.Text = "toolStrip1";
             // 
-            // CargarRellenosToolStripButton
-            // 
-            this.CargarRellenosToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.download_from_ftp_40px;
-            this.CargarRellenosToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.CargarRellenosToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.CargarRellenosToolStripButton.Name = "CargarRellenosToolStripButton";
-            this.CargarRellenosToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.CargarRellenosToolStripButton.Text = "Cargar";
-            this.CargarRellenosToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.CargarRellenosToolStripButton.Click += new System.EventHandler(this.CargarRellenosToolStripButton_Click);
-            // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(73, 6);
-            // 
-            // NuevoRellenoToolStripButton
-            // 
-            this.NuevoRellenoToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Nuevo;
-            this.NuevoRellenoToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.NuevoRellenoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.NuevoRellenoToolStripButton.Name = "NuevoRellenoToolStripButton";
-            this.NuevoRellenoToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.NuevoRellenoToolStripButton.Text = "Nuevo";
-            this.NuevoRellenoToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.NuevoRellenoToolStripButton.Click += new System.EventHandler(this.NuevoRellenoToolStripButton_Click);
-            // 
-            // BorrarRellenoToolStripButton
-            // 
-            this.BorrarRellenoToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Delete;
-            this.BorrarRellenoToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.BorrarRellenoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BorrarRellenoToolStripButton.Name = "BorrarRellenoToolStripButton";
-            this.BorrarRellenoToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.BorrarRellenoToolStripButton.Text = "Borrar";
-            this.BorrarRellenoToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.BorrarRellenoToolStripButton.Click += new System.EventHandler(this.BorrarRellenoToolStripButton_Click);
-            // 
-            // EditarRellenoToolStripButton
-            // 
-            this.EditarRellenoToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Edit;
-            this.EditarRellenoToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.EditarRellenoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.EditarRellenoToolStripButton.Name = "EditarRellenoToolStripButton";
-            this.EditarRellenoToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.EditarRellenoToolStripButton.Text = "Editar";
-            this.EditarRellenoToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.EditarRellenoToolStripButton.Click += new System.EventHandler(this.EditarRellenoToolStripButton_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(73, 6);
             // 
-            // OKRellenoToolStripButton
-            // 
-            this.OKRellenoToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Aceptar;
-            this.OKRellenoToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.OKRellenoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.OKRellenoToolStripButton.Name = "OKRellenoToolStripButton";
-            this.OKRellenoToolStripButton.Size = new System.Drawing.Size(73, 47);
-            this.OKRellenoToolStripButton.Text = "OK";
-            this.OKRellenoToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.OKRellenoToolStripButton.Click += new System.EventHandler(this.OKRellenoToolStripButton_Click);
-            // 
-            // CancelarRellenoToolStripButton
-            // 
-            this.CancelarRellenoToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Cancelar;
-            this.CancelarRellenoToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.CancelarRellenoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.CancelarRellenoToolStripButton.Name = "CancelarRellenoToolStripButton";
-            this.CancelarRellenoToolStripButton.Size = new System.Drawing.Size(73, 47);
-            this.CancelarRellenoToolStripButton.Text = "Cancelar";
-            this.CancelarRellenoToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.CancelarRellenoToolStripButton.Click += new System.EventHandler(this.CancelarRellenoToolStripButton_Click);
-            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(73, 6);
             // 
-            // ImprimirRellenoToolStripButton
-            // 
-            this.ImprimirRellenoToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Print;
-            this.ImprimirRellenoToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ImprimirRellenoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ImprimirRellenoToolStripButton.Name = "ImprimirRellenoToolStripButton";
-            this.ImprimirRellenoToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.ImprimirRellenoToolStripButton.Text = "Imprimir";
-            this.ImprimirRellenoToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(73, 6);
-            // 
-            // CerrarRellenoToolStripButton
-            // 
-            this.CerrarRellenoToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Close;
-            this.CerrarRellenoToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.CerrarRellenoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.CerrarRellenoToolStripButton.Name = "CerrarRellenoToolStripButton";
-            this.CerrarRellenoToolStripButton.Size = new System.Drawing.Size(44, 59);
-            this.CerrarRellenoToolStripButton.Text = "Cerrar";
-            this.CerrarRellenoToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.CerrarRellenoToolStripButton.Click += new System.EventHandler(this.CerrarRellenoToolStripButton_Click);
             // 
             // RellenosDataGridView
             // 
@@ -292,8 +205,8 @@ namespace AppComercial2021.Windows
             // colRelleno
             // 
             this.colRelleno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colRelleno.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colRelleno.DefaultCellStyle = dataGridViewCellStyle1;
             this.colRelleno.HeaderText = "Relleno";
             this.colRelleno.Name = "colRelleno";
             this.colRelleno.ReadOnly = true;
@@ -301,6 +214,7 @@ namespace AppComercial2021.Windows
             // RellenoTextBox
             // 
             this.RellenoTextBox.Location = new System.Drawing.Point(142, 28);
+            this.RellenoTextBox.MaxLength = 50;
             this.RellenoTextBox.Name = "RellenoTextBox";
             this.RellenoTextBox.Size = new System.Drawing.Size(267, 20);
             this.RellenoTextBox.TabIndex = 1;
@@ -351,107 +265,25 @@ namespace AppComercial2021.Windows
             this.ChocolatesToolStrip.TabIndex = 11;
             this.ChocolatesToolStrip.Text = "toolStrip1";
             // 
-            // CargarChocolatesToolStripButton
-            // 
-            this.CargarChocolatesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.download_from_ftp_40px;
-            this.CargarChocolatesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.CargarChocolatesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.CargarChocolatesToolStripButton.Name = "CargarChocolatesToolStripButton";
-            this.CargarChocolatesToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.CargarChocolatesToolStripButton.Text = "Cargar";
-            this.CargarChocolatesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.CargarChocolatesToolStripButton.Click += new System.EventHandler(this.CargarChocolatesToolStripButton_Click);
-            // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(73, 6);
-            // 
-            // NuevoChocolateToolStripButton
-            // 
-            this.NuevoChocolateToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Nuevo;
-            this.NuevoChocolateToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.NuevoChocolateToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.NuevoChocolateToolStripButton.Name = "NuevoChocolateToolStripButton";
-            this.NuevoChocolateToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.NuevoChocolateToolStripButton.Text = "Nuevo";
-            this.NuevoChocolateToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // BorrarChocolateToolStripButton
-            // 
-            this.BorrarChocolateToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Delete;
-            this.BorrarChocolateToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.BorrarChocolateToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BorrarChocolateToolStripButton.Name = "BorrarChocolateToolStripButton";
-            this.BorrarChocolateToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.BorrarChocolateToolStripButton.Text = "Borrar";
-            this.BorrarChocolateToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // EditarChocolateToolStripButton
-            // 
-            this.EditarChocolateToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Edit;
-            this.EditarChocolateToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.EditarChocolateToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.EditarChocolateToolStripButton.Name = "EditarChocolateToolStripButton";
-            this.EditarChocolateToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.EditarChocolateToolStripButton.Text = "Editar";
-            this.EditarChocolateToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(73, 6);
             // 
-            // OKChocolatesToolStripButton
-            // 
-            this.OKChocolatesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Aceptar;
-            this.OKChocolatesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.OKChocolatesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.OKChocolatesToolStripButton.Name = "OKChocolatesToolStripButton";
-            this.OKChocolatesToolStripButton.Size = new System.Drawing.Size(73, 47);
-            this.OKChocolatesToolStripButton.Text = "OK";
-            this.OKChocolatesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // CancelarChocolatesToolStripButton
-            // 
-            this.CancelarChocolatesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Cancelar;
-            this.CancelarChocolatesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.CancelarChocolatesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.CancelarChocolatesToolStripButton.Name = "CancelarChocolatesToolStripButton";
-            this.CancelarChocolatesToolStripButton.Size = new System.Drawing.Size(73, 47);
-            this.CancelarChocolatesToolStripButton.Text = "Cancelar";
-            this.CancelarChocolatesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(73, 6);
             // 
-            // ImprimirChocolatesToolStripButton
-            // 
-            this.ImprimirChocolatesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Print;
-            this.ImprimirChocolatesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ImprimirChocolatesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ImprimirChocolatesToolStripButton.Name = "ImprimirChocolatesToolStripButton";
-            this.ImprimirChocolatesToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.ImprimirChocolatesToolStripButton.Text = "Imprimir";
-            this.ImprimirChocolatesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
             this.toolStripSeparator8.Size = new System.Drawing.Size(73, 6);
-            // 
-            // CerrarChocolatesToolStripButton
-            // 
-            this.CerrarChocolatesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Close;
-            this.CerrarChocolatesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.CerrarChocolatesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.CerrarChocolatesToolStripButton.Name = "CerrarChocolatesToolStripButton";
-            this.CerrarChocolatesToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.CerrarChocolatesToolStripButton.Text = "Cerrar";
-            this.CerrarChocolatesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.CerrarChocolatesToolStripButton.Click += new System.EventHandler(this.CerrarChocolatesToolStripButton_Click);
             // 
             // ChocolatesDataGridView
             // 
@@ -469,8 +301,8 @@ namespace AppComercial2021.Windows
             // colChocolate
             // 
             this.colChocolate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colChocolate.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colChocolate.DefaultCellStyle = dataGridViewCellStyle2;
             this.colChocolate.HeaderText = "Chocolate";
             this.colChocolate.Name = "colChocolate";
             this.colChocolate.ReadOnly = true;
@@ -478,6 +310,7 @@ namespace AppComercial2021.Windows
             // ChocolateTextBox
             // 
             this.ChocolateTextBox.Location = new System.Drawing.Point(169, 27);
+            this.ChocolateTextBox.MaxLength = 50;
             this.ChocolateTextBox.Name = "ChocolateTextBox";
             this.ChocolateTextBox.Size = new System.Drawing.Size(253, 20);
             this.ChocolateTextBox.TabIndex = 4;
@@ -527,6 +360,238 @@ namespace AppComercial2021.Windows
             this.NuecesToolStrip.TabIndex = 11;
             this.NuecesToolStrip.Text = "toolStrip1";
             // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(73, 6);
+            // 
+            // toolStripSeparator10
+            // 
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(73, 6);
+            // 
+            // toolStripSeparator11
+            // 
+            this.toolStripSeparator11.Name = "toolStripSeparator11";
+            this.toolStripSeparator11.Size = new System.Drawing.Size(73, 6);
+            // 
+            // toolStripSeparator12
+            // 
+            this.toolStripSeparator12.Name = "toolStripSeparator12";
+            this.toolStripSeparator12.Size = new System.Drawing.Size(73, 6);
+            // 
+            // NuecesDataGridView
+            // 
+            this.NuecesDataGridView.AllowUserToAddRows = false;
+            this.NuecesDataGridView.AllowUserToDeleteRows = false;
+            this.NuecesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.NuecesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colNuez});
+            this.NuecesDataGridView.Location = new System.Drawing.Point(50, 78);
+            this.NuecesDataGridView.Name = "NuecesDataGridView";
+            this.NuecesDataGridView.ReadOnly = true;
+            this.NuecesDataGridView.Size = new System.Drawing.Size(371, 415);
+            this.NuecesDataGridView.TabIndex = 8;
+            // 
+            // colNuez
+            // 
+            this.colNuez.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colNuez.DefaultCellStyle = dataGridViewCellStyle3;
+            this.colNuez.HeaderText = "Nuez";
+            this.colNuez.Name = "colNuez";
+            this.colNuez.ReadOnly = true;
+            // 
+            // NuezTextBox
+            // 
+            this.NuezTextBox.Location = new System.Drawing.Point(168, 33);
+            this.NuezTextBox.MaxLength = 50;
+            this.NuezTextBox.Name = "NuezTextBox";
+            this.NuezTextBox.Size = new System.Drawing.Size(253, 20);
+            this.NuezTextBox.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(47, 36);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Tipo de Nuez::";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // CargarRellenosToolStripButton
+            // 
+            this.CargarRellenosToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.download_from_ftp_40px;
+            this.CargarRellenosToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CargarRellenosToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CargarRellenosToolStripButton.Name = "CargarRellenosToolStripButton";
+            this.CargarRellenosToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.CargarRellenosToolStripButton.Text = "Cargar";
+            this.CargarRellenosToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.CargarRellenosToolStripButton.Click += new System.EventHandler(this.CargarRellenosToolStripButton_Click);
+            // 
+            // NuevoRellenoToolStripButton
+            // 
+            this.NuevoRellenoToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Nuevo;
+            this.NuevoRellenoToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.NuevoRellenoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.NuevoRellenoToolStripButton.Name = "NuevoRellenoToolStripButton";
+            this.NuevoRellenoToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.NuevoRellenoToolStripButton.Text = "Nuevo";
+            this.NuevoRellenoToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.NuevoRellenoToolStripButton.Click += new System.EventHandler(this.NuevoRellenoToolStripButton_Click);
+            // 
+            // BorrarRellenoToolStripButton
+            // 
+            this.BorrarRellenoToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Delete;
+            this.BorrarRellenoToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.BorrarRellenoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BorrarRellenoToolStripButton.Name = "BorrarRellenoToolStripButton";
+            this.BorrarRellenoToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.BorrarRellenoToolStripButton.Text = "Borrar";
+            this.BorrarRellenoToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BorrarRellenoToolStripButton.Click += new System.EventHandler(this.BorrarRellenoToolStripButton_Click);
+            // 
+            // EditarRellenoToolStripButton
+            // 
+            this.EditarRellenoToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Edit;
+            this.EditarRellenoToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.EditarRellenoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.EditarRellenoToolStripButton.Name = "EditarRellenoToolStripButton";
+            this.EditarRellenoToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.EditarRellenoToolStripButton.Text = "Editar";
+            this.EditarRellenoToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.EditarRellenoToolStripButton.Click += new System.EventHandler(this.EditarRellenoToolStripButton_Click);
+            // 
+            // OKRellenoToolStripButton
+            // 
+            this.OKRellenoToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Aceptar;
+            this.OKRellenoToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.OKRellenoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.OKRellenoToolStripButton.Name = "OKRellenoToolStripButton";
+            this.OKRellenoToolStripButton.Size = new System.Drawing.Size(73, 47);
+            this.OKRellenoToolStripButton.Text = "OK";
+            this.OKRellenoToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.OKRellenoToolStripButton.Click += new System.EventHandler(this.OKRellenoToolStripButton_Click);
+            // 
+            // CancelarRellenoToolStripButton
+            // 
+            this.CancelarRellenoToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Cancelar;
+            this.CancelarRellenoToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CancelarRellenoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CancelarRellenoToolStripButton.Name = "CancelarRellenoToolStripButton";
+            this.CancelarRellenoToolStripButton.Size = new System.Drawing.Size(73, 47);
+            this.CancelarRellenoToolStripButton.Text = "Cancelar";
+            this.CancelarRellenoToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.CancelarRellenoToolStripButton.Click += new System.EventHandler(this.CancelarRellenoToolStripButton_Click);
+            // 
+            // ImprimirRellenoToolStripButton
+            // 
+            this.ImprimirRellenoToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Print;
+            this.ImprimirRellenoToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ImprimirRellenoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ImprimirRellenoToolStripButton.Name = "ImprimirRellenoToolStripButton";
+            this.ImprimirRellenoToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.ImprimirRellenoToolStripButton.Text = "Imprimir";
+            this.ImprimirRellenoToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // CerrarRellenoToolStripButton
+            // 
+            this.CerrarRellenoToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Close;
+            this.CerrarRellenoToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CerrarRellenoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CerrarRellenoToolStripButton.Name = "CerrarRellenoToolStripButton";
+            this.CerrarRellenoToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.CerrarRellenoToolStripButton.Text = "Cerrar";
+            this.CerrarRellenoToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.CerrarRellenoToolStripButton.Click += new System.EventHandler(this.CerrarRellenoToolStripButton_Click);
+            // 
+            // CargarChocolatesToolStripButton
+            // 
+            this.CargarChocolatesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.download_from_ftp_40px;
+            this.CargarChocolatesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CargarChocolatesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CargarChocolatesToolStripButton.Name = "CargarChocolatesToolStripButton";
+            this.CargarChocolatesToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.CargarChocolatesToolStripButton.Text = "Cargar";
+            this.CargarChocolatesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.CargarChocolatesToolStripButton.Click += new System.EventHandler(this.CargarChocolatesToolStripButton_Click);
+            // 
+            // NuevoChocolateToolStripButton
+            // 
+            this.NuevoChocolateToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Nuevo;
+            this.NuevoChocolateToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.NuevoChocolateToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.NuevoChocolateToolStripButton.Name = "NuevoChocolateToolStripButton";
+            this.NuevoChocolateToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.NuevoChocolateToolStripButton.Text = "Nuevo";
+            this.NuevoChocolateToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // BorrarChocolateToolStripButton
+            // 
+            this.BorrarChocolateToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Delete;
+            this.BorrarChocolateToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.BorrarChocolateToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BorrarChocolateToolStripButton.Name = "BorrarChocolateToolStripButton";
+            this.BorrarChocolateToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.BorrarChocolateToolStripButton.Text = "Borrar";
+            this.BorrarChocolateToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // EditarChocolateToolStripButton
+            // 
+            this.EditarChocolateToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Edit;
+            this.EditarChocolateToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.EditarChocolateToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.EditarChocolateToolStripButton.Name = "EditarChocolateToolStripButton";
+            this.EditarChocolateToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.EditarChocolateToolStripButton.Text = "Editar";
+            this.EditarChocolateToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // OKChocolatesToolStripButton
+            // 
+            this.OKChocolatesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Aceptar;
+            this.OKChocolatesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.OKChocolatesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.OKChocolatesToolStripButton.Name = "OKChocolatesToolStripButton";
+            this.OKChocolatesToolStripButton.Size = new System.Drawing.Size(73, 47);
+            this.OKChocolatesToolStripButton.Text = "OK";
+            this.OKChocolatesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // CancelarChocolatesToolStripButton
+            // 
+            this.CancelarChocolatesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Cancelar;
+            this.CancelarChocolatesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CancelarChocolatesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CancelarChocolatesToolStripButton.Name = "CancelarChocolatesToolStripButton";
+            this.CancelarChocolatesToolStripButton.Size = new System.Drawing.Size(73, 47);
+            this.CancelarChocolatesToolStripButton.Text = "Cancelar";
+            this.CancelarChocolatesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // ImprimirChocolatesToolStripButton
+            // 
+            this.ImprimirChocolatesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Print;
+            this.ImprimirChocolatesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ImprimirChocolatesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ImprimirChocolatesToolStripButton.Name = "ImprimirChocolatesToolStripButton";
+            this.ImprimirChocolatesToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.ImprimirChocolatesToolStripButton.Text = "Imprimir";
+            this.ImprimirChocolatesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // CerrarChocolatesToolStripButton
+            // 
+            this.CerrarChocolatesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Close;
+            this.CerrarChocolatesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CerrarChocolatesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CerrarChocolatesToolStripButton.Name = "CerrarChocolatesToolStripButton";
+            this.CerrarChocolatesToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.CerrarChocolatesToolStripButton.Text = "Cerrar";
+            this.CerrarChocolatesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.CerrarChocolatesToolStripButton.Click += new System.EventHandler(this.CerrarChocolatesToolStripButton_Click);
+            // 
             // CargarNuecesToolStripButton
             // 
             this.CargarNuecesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.download_from_ftp_40px;
@@ -537,11 +602,6 @@ namespace AppComercial2021.Windows
             this.CargarNuecesToolStripButton.Text = "Cargar";
             this.CargarNuecesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.CargarNuecesToolStripButton.Click += new System.EventHandler(this.CargarNuecesToolStripButton_Click);
-            // 
-            // toolStripSeparator9
-            // 
-            this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(73, 6);
             // 
             // NuevoNuecesToolStripButton
             // 
@@ -573,11 +633,6 @@ namespace AppComercial2021.Windows
             this.EditarNuecesToolStripButton.Text = "Editar";
             this.EditarNuecesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // toolStripSeparator10
-            // 
-            this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(73, 6);
-            // 
             // OKNuecesToolStripButton
             // 
             this.OKNuecesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Aceptar;
@@ -598,11 +653,6 @@ namespace AppComercial2021.Windows
             this.CancelarNuecesToolStripButton.Text = "Cancelar";
             this.CancelarNuecesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // toolStripSeparator11
-            // 
-            this.toolStripSeparator11.Name = "toolStripSeparator11";
-            this.toolStripSeparator11.Size = new System.Drawing.Size(73, 6);
-            // 
             // ImprimirNuecesToolStripButton
             // 
             this.ImprimirNuecesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Print;
@@ -612,11 +662,6 @@ namespace AppComercial2021.Windows
             this.ImprimirNuecesToolStripButton.Size = new System.Drawing.Size(73, 59);
             this.ImprimirNuecesToolStripButton.Text = "Imprimir";
             this.ImprimirNuecesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // toolStripSeparator12
-            // 
-            this.toolStripSeparator12.Name = "toolStripSeparator12";
-            this.toolStripSeparator12.Size = new System.Drawing.Size(73, 6);
             // 
             // CerrarNuecesToolStripButton
             // 
@@ -628,48 +673,6 @@ namespace AppComercial2021.Windows
             this.CerrarNuecesToolStripButton.Text = "Cerrar";
             this.CerrarNuecesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.CerrarNuecesToolStripButton.Click += new System.EventHandler(this.CerrarNuecesToolStripButton_Click);
-            // 
-            // NuecesDataGridView
-            // 
-            this.NuecesDataGridView.AllowUserToAddRows = false;
-            this.NuecesDataGridView.AllowUserToDeleteRows = false;
-            this.NuecesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.NuecesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colNuez});
-            this.NuecesDataGridView.Location = new System.Drawing.Point(50, 78);
-            this.NuecesDataGridView.Name = "NuecesDataGridView";
-            this.NuecesDataGridView.ReadOnly = true;
-            this.NuecesDataGridView.Size = new System.Drawing.Size(371, 415);
-            this.NuecesDataGridView.TabIndex = 8;
-            // 
-            // colNuez
-            // 
-            this.colNuez.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colNuez.DefaultCellStyle = dataGridViewCellStyle6;
-            this.colNuez.HeaderText = "Nuez";
-            this.colNuez.Name = "colNuez";
-            this.colNuez.ReadOnly = true;
-            // 
-            // NuezTextBox
-            // 
-            this.NuezTextBox.Location = new System.Drawing.Point(168, 33);
-            this.NuezTextBox.Name = "NuezTextBox";
-            this.NuezTextBox.Size = new System.Drawing.Size(253, 20);
-            this.NuezTextBox.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(47, 36);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Tipo de Nuez::";
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // FrmIngredientes
             // 

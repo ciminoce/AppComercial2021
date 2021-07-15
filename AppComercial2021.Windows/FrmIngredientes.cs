@@ -21,7 +21,6 @@ namespace AppComercial2021.Windows
             InitializeComponent();
         }
 
-        private ServicioTipoRelleno servicioRellenos;
         private ServicioTipoChocolate servicioChocolate;
         private ServicioTipoNuez servicioNuez;
 

@@ -52,17 +52,27 @@
     <Compile Include="FrmIngredientes.Designer.cs">
       <DependentUpon>FrmIngredientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPersonas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPersonas.Designer.cs">
+      <DependentUpon>FrmPersonas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\HelperCombo.cs" />
     <Compile Include="Helpers\HelperGrid.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmIngredientes.resx">
       <DependentUpon>FrmIngredientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPersonas.resx">
+      <DependentUpon>FrmPersonas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>

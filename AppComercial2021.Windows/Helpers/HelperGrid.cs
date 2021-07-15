@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppComercial2021.Entidades.DTOs;
 using AppComercial2021.Entidades.Entidades;
 
 namespace AppComercial2021.Windows.Helpers
@@ -25,6 +26,13 @@ namespace AppComercial2021.Windows.Helpers
             }else if (obj is TipoNuez)
             {
                 r.Cells[0].Value = ((TipoNuez) obj).Descripcion;
+            }else if (obj is Provincia)
+            {
+                r.Cells[0].Value = ((Provincia) obj).NombreProvincia;
+            }else if (obj is LocalidadDto)
+            {
+                r.Cells[0].Value = ((LocalidadDto) obj).NombreLocalidad;
+                r.Cells[1].Value = ((LocalidadDto) obj).NombreProvincia;
             }
 
             r.Tag = obj;

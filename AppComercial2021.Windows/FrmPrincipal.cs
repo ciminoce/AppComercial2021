@@ -33,5 +33,11 @@ namespace AppComercial2021.Windows
                 Application.Exit();
             }
         }
+
+        private void personasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmPersonas frm = new FrmPersonas();
+            frm.Show();
+        }
     }
 }

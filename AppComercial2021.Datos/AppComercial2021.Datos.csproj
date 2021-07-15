@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="ConexionBd.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositorioLocalidad.cs" />
+    <Compile Include="RepositorioProvincia.cs" />
     <Compile Include="RepositorioTipoChocolate.cs" />
     <Compile Include="RepositorioTipoNuez.cs" />
     <Compile Include="RepositorioTipoRelleno.cs" />

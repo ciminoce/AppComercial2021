@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTOs\LocalidadDto.cs" />
+    <Compile Include="Entidades\Localidad.cs" />
+    <Compile Include="Entidades\Provincia.cs" />
     <Compile Include="Entidades\TipoChocolate.cs" />
     <Compile Include="Entidades\TipoNuez.cs" />
     <Compile Include="Entidades\TipoRelleno.cs" />
