@@ -30,70 +30,62 @@ namespace AppComercial2021.Windows
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LocalidadesTabControl = new System.Windows.Forms.TabControl();
             this.ProvinciasTabPage = new System.Windows.Forms.TabPage();
             this.ProvinciasToolStrip = new System.Windows.Forms.ToolStrip();
-            this.CargarProvinciasToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.NuevoProvinciaToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.BorrarProvinciaToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.EditarProvinciaToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.OKProvinciaToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.CancelarProvinciaToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.ImprimirProvinciaToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.CerrarProvinciaToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.ProvinciasDataGridView = new System.Windows.Forms.DataGridView();
             this.colProvincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProvinciaTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.LocalidadesTabPage = new System.Windows.Forms.TabPage();
-            this.ProvinciasComboBox = new System.Windows.Forms.ComboBox();
             this.LocalidadesToolStrip = new System.Windows.Forms.ToolStrip();
-            this.CargarLocalidadToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.NuevoLocalidadToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.BorrarLocalidadToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.EditarLocalidadToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.OKLocalidadToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.CancelarLocalidadToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.ImprimirLocalidadToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.CerrarLocalidadToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.LocalidadesDataGridView = new System.Windows.Forms.DataGridView();
             this.colLocalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colProvinciaLocalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LocalidadTextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.ProveedoresTabPage = new System.Windows.Forms.TabPage();
             this.NuecesToolStrip = new System.Windows.Forms.ToolStrip();
-            this.CargarNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
-            this.NuevoNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.BorrarNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.EditarNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
-            this.OKNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.CancelarNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
-            this.ImprimirNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
-            this.CerrarNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.ClientesTabPage = new System.Windows.Forms.TabPage();
             this.EmpleadosTabPage = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CargarProvinciasToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.NuevoProvinciaToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.BorrarProvinciaToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.EditarProvinciaToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.OKProvinciaToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.CancelarProvinciaToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.ImprimirProvinciaToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.CerrarProvinciaToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.CargarLocalidadToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.NuevoLocalidadToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.BorrarLocalidadToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.EditarLocalidadToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.ImprimirLocalidadToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.CerrarLocalidadToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.CargarNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.NuevoNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.BorrarNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.EditarNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.OKNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.CancelarNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.ImprimirNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.CerrarNuecesToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.LocalidadesTabControl.SuspendLayout();
             this.ProvinciasTabPage.SuspendLayout();
             this.ProvinciasToolStrip.SuspendLayout();
@@ -157,112 +149,25 @@ namespace AppComercial2021.Windows
             this.ProvinciasToolStrip.TabIndex = 10;
             this.ProvinciasToolStrip.Text = "toolStrip1";
             // 
-            // CargarProvinciasToolStripButton
-            // 
-            this.CargarProvinciasToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.download_from_ftp_40px;
-            this.CargarProvinciasToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.CargarProvinciasToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.CargarProvinciasToolStripButton.Name = "CargarProvinciasToolStripButton";
-            this.CargarProvinciasToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.CargarProvinciasToolStripButton.Text = "Cargar";
-            this.CargarProvinciasToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.CargarProvinciasToolStripButton.Click += new System.EventHandler(this.CargarProvinciasToolStripButton_Click);
-            // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(73, 6);
-            // 
-            // NuevoProvinciaToolStripButton
-            // 
-            this.NuevoProvinciaToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Nuevo;
-            this.NuevoProvinciaToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.NuevoProvinciaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.NuevoProvinciaToolStripButton.Name = "NuevoProvinciaToolStripButton";
-            this.NuevoProvinciaToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.NuevoProvinciaToolStripButton.Text = "Nuevo";
-            this.NuevoProvinciaToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.NuevoProvinciaToolStripButton.Click += new System.EventHandler(this.NuevoProvinciaToolStripButton_Click);
-            // 
-            // BorrarProvinciaToolStripButton
-            // 
-            this.BorrarProvinciaToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Delete;
-            this.BorrarProvinciaToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.BorrarProvinciaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BorrarProvinciaToolStripButton.Name = "BorrarProvinciaToolStripButton";
-            this.BorrarProvinciaToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.BorrarProvinciaToolStripButton.Text = "Borrar";
-            this.BorrarProvinciaToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.BorrarProvinciaToolStripButton.Click += new System.EventHandler(this.BorrarProvinciaToolStripButton_Click);
-            // 
-            // EditarProvinciaToolStripButton
-            // 
-            this.EditarProvinciaToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Edit;
-            this.EditarProvinciaToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.EditarProvinciaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.EditarProvinciaToolStripButton.Name = "EditarProvinciaToolStripButton";
-            this.EditarProvinciaToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.EditarProvinciaToolStripButton.Text = "Editar";
-            this.EditarProvinciaToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.EditarProvinciaToolStripButton.Click += new System.EventHandler(this.EditarProvinciaToolStripButton_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(73, 6);
             // 
-            // OKProvinciaToolStripButton
-            // 
-            this.OKProvinciaToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Aceptar;
-            this.OKProvinciaToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.OKProvinciaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.OKProvinciaToolStripButton.Name = "OKProvinciaToolStripButton";
-            this.OKProvinciaToolStripButton.Size = new System.Drawing.Size(73, 47);
-            this.OKProvinciaToolStripButton.Text = "OK";
-            this.OKProvinciaToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.OKProvinciaToolStripButton.Click += new System.EventHandler(this.OKProvinciaToolStripButton_Click);
-            // 
-            // CancelarProvinciaToolStripButton
-            // 
-            this.CancelarProvinciaToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Cancelar;
-            this.CancelarProvinciaToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.CancelarProvinciaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.CancelarProvinciaToolStripButton.Name = "CancelarProvinciaToolStripButton";
-            this.CancelarProvinciaToolStripButton.Size = new System.Drawing.Size(73, 47);
-            this.CancelarProvinciaToolStripButton.Text = "Cancelar";
-            this.CancelarProvinciaToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.CancelarProvinciaToolStripButton.Click += new System.EventHandler(this.CancelarProvinciaToolStripButton_Click);
-            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(73, 6);
             // 
-            // ImprimirProvinciaToolStripButton
-            // 
-            this.ImprimirProvinciaToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Print;
-            this.ImprimirProvinciaToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ImprimirProvinciaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ImprimirProvinciaToolStripButton.Name = "ImprimirProvinciaToolStripButton";
-            this.ImprimirProvinciaToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.ImprimirProvinciaToolStripButton.Text = "Imprimir";
-            this.ImprimirProvinciaToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(73, 6);
-            // 
-            // CerrarProvinciaToolStripButton
-            // 
-            this.CerrarProvinciaToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Close;
-            this.CerrarProvinciaToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.CerrarProvinciaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.CerrarProvinciaToolStripButton.Name = "CerrarProvinciaToolStripButton";
-            this.CerrarProvinciaToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.CerrarProvinciaToolStripButton.Text = "Cerrar";
-            this.CerrarProvinciaToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.CerrarProvinciaToolStripButton.Click += new System.EventHandler(this.CerrarProvinciaToolStripButton_Click);
             // 
             // ProvinciasDataGridView
             // 
@@ -270,19 +175,11 @@ namespace AppComercial2021.Windows
             this.ProvinciasDataGridView.AllowUserToDeleteRows = false;
             this.ProvinciasDataGridView.AllowUserToResizeColumns = false;
             this.ProvinciasDataGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ProvinciasDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ProvinciasDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.ProvinciasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProvinciasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colProvincia});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ProvinciasDataGridView.DefaultCellStyle = dataGridViewCellStyle12;
             this.ProvinciasDataGridView.Location = new System.Drawing.Point(38, 73);
             this.ProvinciasDataGridView.MultiSelect = false;
             this.ProvinciasDataGridView.Name = "ProvinciasDataGridView";
@@ -294,8 +191,8 @@ namespace AppComercial2021.Windows
             // colProvincia
             // 
             this.colProvincia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colProvincia.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colProvincia.DefaultCellStyle = dataGridViewCellStyle2;
             this.colProvincia.HeaderText = "Provincia";
             this.colProvincia.Name = "colProvincia";
             this.colProvincia.ReadOnly = true;
@@ -319,12 +216,8 @@ namespace AppComercial2021.Windows
             // 
             // LocalidadesTabPage
             // 
-            this.LocalidadesTabPage.Controls.Add(this.ProvinciasComboBox);
             this.LocalidadesTabPage.Controls.Add(this.LocalidadesToolStrip);
             this.LocalidadesTabPage.Controls.Add(this.LocalidadesDataGridView);
-            this.LocalidadesTabPage.Controls.Add(this.LocalidadTextBox);
-            this.LocalidadesTabPage.Controls.Add(this.label5);
-            this.LocalidadesTabPage.Controls.Add(this.label3);
             this.LocalidadesTabPage.Location = new System.Drawing.Point(4, 22);
             this.LocalidadesTabPage.Name = "LocalidadesTabPage";
             this.LocalidadesTabPage.Padding = new System.Windows.Forms.Padding(3);
@@ -332,15 +225,6 @@ namespace AppComercial2021.Windows
             this.LocalidadesTabPage.TabIndex = 1;
             this.LocalidadesTabPage.Text = "Localidades";
             this.LocalidadesTabPage.UseVisualStyleBackColor = true;
-            // 
-            // ProvinciasComboBox
-            // 
-            this.ProvinciasComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ProvinciasComboBox.FormattingEnabled = true;
-            this.ProvinciasComboBox.Location = new System.Drawing.Point(125, 22);
-            this.ProvinciasComboBox.Name = "ProvinciasComboBox";
-            this.ProvinciasComboBox.Size = new System.Drawing.Size(297, 21);
-            this.ProvinciasComboBox.TabIndex = 12;
             // 
             // LocalidadesToolStrip
             // 
@@ -353,8 +237,6 @@ namespace AppComercial2021.Windows
             this.BorrarLocalidadToolStripButton,
             this.EditarLocalidadToolStripButton,
             this.toolStripSeparator6,
-            this.OKLocalidadToolStripButton,
-            this.CancelarLocalidadToolStripButton,
             this.toolStripSeparator7,
             this.ImprimirLocalidadToolStripButton,
             this.toolStripSeparator8,
@@ -365,140 +247,49 @@ namespace AppComercial2021.Windows
             this.LocalidadesToolStrip.TabIndex = 11;
             this.LocalidadesToolStrip.Text = "toolStrip1";
             // 
-            // CargarLocalidadToolStripButton
-            // 
-            this.CargarLocalidadToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.download_from_ftp_40px;
-            this.CargarLocalidadToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.CargarLocalidadToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.CargarLocalidadToolStripButton.Name = "CargarLocalidadToolStripButton";
-            this.CargarLocalidadToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.CargarLocalidadToolStripButton.Text = "Cargar";
-            this.CargarLocalidadToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.CargarLocalidadToolStripButton.Click += new System.EventHandler(this.CargarLocalidadToolStripButton_Click);
-            // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(73, 6);
-            // 
-            // NuevoLocalidadToolStripButton
-            // 
-            this.NuevoLocalidadToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Nuevo;
-            this.NuevoLocalidadToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.NuevoLocalidadToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.NuevoLocalidadToolStripButton.Name = "NuevoLocalidadToolStripButton";
-            this.NuevoLocalidadToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.NuevoLocalidadToolStripButton.Text = "Nuevo";
-            this.NuevoLocalidadToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.NuevoLocalidadToolStripButton.Click += new System.EventHandler(this.NuevoLocalidadToolStripButton_Click);
-            // 
-            // BorrarLocalidadToolStripButton
-            // 
-            this.BorrarLocalidadToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Delete;
-            this.BorrarLocalidadToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.BorrarLocalidadToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BorrarLocalidadToolStripButton.Name = "BorrarLocalidadToolStripButton";
-            this.BorrarLocalidadToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.BorrarLocalidadToolStripButton.Text = "Borrar";
-            this.BorrarLocalidadToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // EditarLocalidadToolStripButton
-            // 
-            this.EditarLocalidadToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Edit;
-            this.EditarLocalidadToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.EditarLocalidadToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.EditarLocalidadToolStripButton.Name = "EditarLocalidadToolStripButton";
-            this.EditarLocalidadToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.EditarLocalidadToolStripButton.Text = "Editar";
-            this.EditarLocalidadToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(73, 6);
             // 
-            // OKLocalidadToolStripButton
-            // 
-            this.OKLocalidadToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Aceptar;
-            this.OKLocalidadToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.OKLocalidadToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.OKLocalidadToolStripButton.Name = "OKLocalidadToolStripButton";
-            this.OKLocalidadToolStripButton.Size = new System.Drawing.Size(73, 47);
-            this.OKLocalidadToolStripButton.Text = "OK";
-            this.OKLocalidadToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // CancelarLocalidadToolStripButton
-            // 
-            this.CancelarLocalidadToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Cancelar;
-            this.CancelarLocalidadToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.CancelarLocalidadToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.CancelarLocalidadToolStripButton.Name = "CancelarLocalidadToolStripButton";
-            this.CancelarLocalidadToolStripButton.Size = new System.Drawing.Size(73, 47);
-            this.CancelarLocalidadToolStripButton.Text = "Cancelar";
-            this.CancelarLocalidadToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(73, 6);
-            // 
-            // ImprimirLocalidadToolStripButton
-            // 
-            this.ImprimirLocalidadToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Print;
-            this.ImprimirLocalidadToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ImprimirLocalidadToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ImprimirLocalidadToolStripButton.Name = "ImprimirLocalidadToolStripButton";
-            this.ImprimirLocalidadToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.ImprimirLocalidadToolStripButton.Text = "Imprimir";
-            this.ImprimirLocalidadToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
             this.toolStripSeparator8.Size = new System.Drawing.Size(73, 6);
             // 
-            // CerrarLocalidadToolStripButton
-            // 
-            this.CerrarLocalidadToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Close;
-            this.CerrarLocalidadToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.CerrarLocalidadToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.CerrarLocalidadToolStripButton.Name = "CerrarLocalidadToolStripButton";
-            this.CerrarLocalidadToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.CerrarLocalidadToolStripButton.Text = "Cerrar";
-            this.CerrarLocalidadToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.CerrarLocalidadToolStripButton.Click += new System.EventHandler(this.CerrarLocalidadToolStripButton_Click);
-            // 
             // LocalidadesDataGridView
             // 
             this.LocalidadesDataGridView.AllowUserToAddRows = false;
             this.LocalidadesDataGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.LocalidadesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.LocalidadesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.LocalidadesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.LocalidadesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colLocalidad,
             this.colProvinciaLocalidad});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.LocalidadesDataGridView.DefaultCellStyle = dataGridViewCellStyle9;
-            this.LocalidadesDataGridView.Location = new System.Drawing.Point(51, 93);
+            this.LocalidadesDataGridView.Location = new System.Drawing.Point(51, 21);
             this.LocalidadesDataGridView.MultiSelect = false;
             this.LocalidadesDataGridView.Name = "LocalidadesDataGridView";
             this.LocalidadesDataGridView.ReadOnly = true;
             this.LocalidadesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.LocalidadesDataGridView.Size = new System.Drawing.Size(712, 399);
+            this.LocalidadesDataGridView.Size = new System.Drawing.Size(712, 471);
             this.LocalidadesDataGridView.TabIndex = 5;
             // 
             // colLocalidad
             // 
             this.colLocalidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colLocalidad.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colLocalidad.DefaultCellStyle = dataGridViewCellStyle4;
             this.colLocalidad.HeaderText = "Localidad";
             this.colLocalidad.Name = "colLocalidad";
             this.colLocalidad.ReadOnly = true;
@@ -509,32 +300,6 @@ namespace AppComercial2021.Windows
             this.colProvinciaLocalidad.HeaderText = "Provincia";
             this.colProvinciaLocalidad.Name = "colProvinciaLocalidad";
             this.colProvinciaLocalidad.ReadOnly = true;
-            // 
-            // LocalidadTextBox
-            // 
-            this.LocalidadTextBox.Location = new System.Drawing.Point(125, 52);
-            this.LocalidadTextBox.MaxLength = 50;
-            this.LocalidadTextBox.Name = "LocalidadTextBox";
-            this.LocalidadTextBox.Size = new System.Drawing.Size(297, 20);
-            this.LocalidadTextBox.TabIndex = 4;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(48, 52);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Localidad:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(48, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Provincia:";
             // 
             // ProveedoresTabPage
             // 
@@ -569,105 +334,25 @@ namespace AppComercial2021.Windows
             this.NuecesToolStrip.TabIndex = 11;
             this.NuecesToolStrip.Text = "toolStrip1";
             // 
-            // CargarNuecesToolStripButton
-            // 
-            this.CargarNuecesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.download_from_ftp_40px;
-            this.CargarNuecesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.CargarNuecesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.CargarNuecesToolStripButton.Name = "CargarNuecesToolStripButton";
-            this.CargarNuecesToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.CargarNuecesToolStripButton.Text = "Cargar";
-            this.CargarNuecesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
             this.toolStripSeparator9.Size = new System.Drawing.Size(73, 6);
-            // 
-            // NuevoNuecesToolStripButton
-            // 
-            this.NuevoNuecesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Nuevo;
-            this.NuevoNuecesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.NuevoNuecesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.NuevoNuecesToolStripButton.Name = "NuevoNuecesToolStripButton";
-            this.NuevoNuecesToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.NuevoNuecesToolStripButton.Text = "Nuevo";
-            this.NuevoNuecesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // BorrarNuecesToolStripButton
-            // 
-            this.BorrarNuecesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Delete;
-            this.BorrarNuecesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.BorrarNuecesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BorrarNuecesToolStripButton.Name = "BorrarNuecesToolStripButton";
-            this.BorrarNuecesToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.BorrarNuecesToolStripButton.Text = "Borrar";
-            this.BorrarNuecesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // EditarNuecesToolStripButton
-            // 
-            this.EditarNuecesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Edit;
-            this.EditarNuecesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.EditarNuecesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.EditarNuecesToolStripButton.Name = "EditarNuecesToolStripButton";
-            this.EditarNuecesToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.EditarNuecesToolStripButton.Text = "Editar";
-            this.EditarNuecesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
             this.toolStripSeparator10.Size = new System.Drawing.Size(73, 6);
             // 
-            // OKNuecesToolStripButton
-            // 
-            this.OKNuecesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Aceptar;
-            this.OKNuecesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.OKNuecesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.OKNuecesToolStripButton.Name = "OKNuecesToolStripButton";
-            this.OKNuecesToolStripButton.Size = new System.Drawing.Size(73, 47);
-            this.OKNuecesToolStripButton.Text = "OK";
-            this.OKNuecesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // CancelarNuecesToolStripButton
-            // 
-            this.CancelarNuecesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Cancelar;
-            this.CancelarNuecesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.CancelarNuecesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.CancelarNuecesToolStripButton.Name = "CancelarNuecesToolStripButton";
-            this.CancelarNuecesToolStripButton.Size = new System.Drawing.Size(73, 47);
-            this.CancelarNuecesToolStripButton.Text = "Cancelar";
-            this.CancelarNuecesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
             // toolStripSeparator11
             // 
             this.toolStripSeparator11.Name = "toolStripSeparator11";
             this.toolStripSeparator11.Size = new System.Drawing.Size(73, 6);
             // 
-            // ImprimirNuecesToolStripButton
-            // 
-            this.ImprimirNuecesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Print;
-            this.ImprimirNuecesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ImprimirNuecesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ImprimirNuecesToolStripButton.Name = "ImprimirNuecesToolStripButton";
-            this.ImprimirNuecesToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.ImprimirNuecesToolStripButton.Text = "Imprimir";
-            this.ImprimirNuecesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
             // toolStripSeparator12
             // 
             this.toolStripSeparator12.Name = "toolStripSeparator12";
             this.toolStripSeparator12.Size = new System.Drawing.Size(73, 6);
-            // 
-            // CerrarNuecesToolStripButton
-            // 
-            this.CerrarNuecesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Close;
-            this.CerrarNuecesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.CerrarNuecesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.CerrarNuecesToolStripButton.Name = "CerrarNuecesToolStripButton";
-            this.CerrarNuecesToolStripButton.Size = new System.Drawing.Size(73, 59);
-            this.CerrarNuecesToolStripButton.Text = "Cerrar";
-            this.CerrarNuecesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // ClientesTabPage
             // 
@@ -704,6 +389,236 @@ namespace AppComercial2021.Windows
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // CargarProvinciasToolStripButton
+            // 
+            this.CargarProvinciasToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.download_from_ftp_40px;
+            this.CargarProvinciasToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CargarProvinciasToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CargarProvinciasToolStripButton.Name = "CargarProvinciasToolStripButton";
+            this.CargarProvinciasToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.CargarProvinciasToolStripButton.Text = "Cargar";
+            this.CargarProvinciasToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.CargarProvinciasToolStripButton.Click += new System.EventHandler(this.CargarProvinciasToolStripButton_Click);
+            // 
+            // NuevoProvinciaToolStripButton
+            // 
+            this.NuevoProvinciaToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Nuevo;
+            this.NuevoProvinciaToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.NuevoProvinciaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.NuevoProvinciaToolStripButton.Name = "NuevoProvinciaToolStripButton";
+            this.NuevoProvinciaToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.NuevoProvinciaToolStripButton.Text = "Nuevo";
+            this.NuevoProvinciaToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.NuevoProvinciaToolStripButton.Click += new System.EventHandler(this.NuevoProvinciaToolStripButton_Click);
+            // 
+            // BorrarProvinciaToolStripButton
+            // 
+            this.BorrarProvinciaToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Delete;
+            this.BorrarProvinciaToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.BorrarProvinciaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BorrarProvinciaToolStripButton.Name = "BorrarProvinciaToolStripButton";
+            this.BorrarProvinciaToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.BorrarProvinciaToolStripButton.Text = "Borrar";
+            this.BorrarProvinciaToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BorrarProvinciaToolStripButton.Click += new System.EventHandler(this.BorrarProvinciaToolStripButton_Click);
+            // 
+            // EditarProvinciaToolStripButton
+            // 
+            this.EditarProvinciaToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Edit;
+            this.EditarProvinciaToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.EditarProvinciaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.EditarProvinciaToolStripButton.Name = "EditarProvinciaToolStripButton";
+            this.EditarProvinciaToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.EditarProvinciaToolStripButton.Text = "Editar";
+            this.EditarProvinciaToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.EditarProvinciaToolStripButton.Click += new System.EventHandler(this.EditarProvinciaToolStripButton_Click);
+            // 
+            // OKProvinciaToolStripButton
+            // 
+            this.OKProvinciaToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Aceptar;
+            this.OKProvinciaToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.OKProvinciaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.OKProvinciaToolStripButton.Name = "OKProvinciaToolStripButton";
+            this.OKProvinciaToolStripButton.Size = new System.Drawing.Size(73, 47);
+            this.OKProvinciaToolStripButton.Text = "OK";
+            this.OKProvinciaToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.OKProvinciaToolStripButton.Click += new System.EventHandler(this.OKProvinciaToolStripButton_Click);
+            // 
+            // CancelarProvinciaToolStripButton
+            // 
+            this.CancelarProvinciaToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Cancelar;
+            this.CancelarProvinciaToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CancelarProvinciaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CancelarProvinciaToolStripButton.Name = "CancelarProvinciaToolStripButton";
+            this.CancelarProvinciaToolStripButton.Size = new System.Drawing.Size(73, 47);
+            this.CancelarProvinciaToolStripButton.Text = "Cancelar";
+            this.CancelarProvinciaToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.CancelarProvinciaToolStripButton.Click += new System.EventHandler(this.CancelarProvinciaToolStripButton_Click);
+            // 
+            // ImprimirProvinciaToolStripButton
+            // 
+            this.ImprimirProvinciaToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Print;
+            this.ImprimirProvinciaToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ImprimirProvinciaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ImprimirProvinciaToolStripButton.Name = "ImprimirProvinciaToolStripButton";
+            this.ImprimirProvinciaToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.ImprimirProvinciaToolStripButton.Text = "Imprimir";
+            this.ImprimirProvinciaToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // CerrarProvinciaToolStripButton
+            // 
+            this.CerrarProvinciaToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Close;
+            this.CerrarProvinciaToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CerrarProvinciaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CerrarProvinciaToolStripButton.Name = "CerrarProvinciaToolStripButton";
+            this.CerrarProvinciaToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.CerrarProvinciaToolStripButton.Text = "Cerrar";
+            this.CerrarProvinciaToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.CerrarProvinciaToolStripButton.Click += new System.EventHandler(this.CerrarProvinciaToolStripButton_Click);
+            // 
+            // CargarLocalidadToolStripButton
+            // 
+            this.CargarLocalidadToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.download_from_ftp_40px;
+            this.CargarLocalidadToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CargarLocalidadToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CargarLocalidadToolStripButton.Name = "CargarLocalidadToolStripButton";
+            this.CargarLocalidadToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.CargarLocalidadToolStripButton.Text = "Cargar";
+            this.CargarLocalidadToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.CargarLocalidadToolStripButton.Click += new System.EventHandler(this.CargarLocalidadToolStripButton_Click);
+            // 
+            // NuevoLocalidadToolStripButton
+            // 
+            this.NuevoLocalidadToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Nuevo;
+            this.NuevoLocalidadToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.NuevoLocalidadToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.NuevoLocalidadToolStripButton.Name = "NuevoLocalidadToolStripButton";
+            this.NuevoLocalidadToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.NuevoLocalidadToolStripButton.Text = "Nuevo";
+            this.NuevoLocalidadToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.NuevoLocalidadToolStripButton.Click += new System.EventHandler(this.NuevoLocalidadToolStripButton_Click);
+            // 
+            // BorrarLocalidadToolStripButton
+            // 
+            this.BorrarLocalidadToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Delete;
+            this.BorrarLocalidadToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.BorrarLocalidadToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BorrarLocalidadToolStripButton.Name = "BorrarLocalidadToolStripButton";
+            this.BorrarLocalidadToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.BorrarLocalidadToolStripButton.Text = "Borrar";
+            this.BorrarLocalidadToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // EditarLocalidadToolStripButton
+            // 
+            this.EditarLocalidadToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Edit;
+            this.EditarLocalidadToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.EditarLocalidadToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.EditarLocalidadToolStripButton.Name = "EditarLocalidadToolStripButton";
+            this.EditarLocalidadToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.EditarLocalidadToolStripButton.Text = "Editar";
+            this.EditarLocalidadToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // ImprimirLocalidadToolStripButton
+            // 
+            this.ImprimirLocalidadToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Print;
+            this.ImprimirLocalidadToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ImprimirLocalidadToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ImprimirLocalidadToolStripButton.Name = "ImprimirLocalidadToolStripButton";
+            this.ImprimirLocalidadToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.ImprimirLocalidadToolStripButton.Text = "Imprimir";
+            this.ImprimirLocalidadToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // CerrarLocalidadToolStripButton
+            // 
+            this.CerrarLocalidadToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Close;
+            this.CerrarLocalidadToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CerrarLocalidadToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CerrarLocalidadToolStripButton.Name = "CerrarLocalidadToolStripButton";
+            this.CerrarLocalidadToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.CerrarLocalidadToolStripButton.Text = "Cerrar";
+            this.CerrarLocalidadToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.CerrarLocalidadToolStripButton.Click += new System.EventHandler(this.CerrarLocalidadToolStripButton_Click);
+            // 
+            // CargarNuecesToolStripButton
+            // 
+            this.CargarNuecesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.download_from_ftp_40px;
+            this.CargarNuecesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CargarNuecesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CargarNuecesToolStripButton.Name = "CargarNuecesToolStripButton";
+            this.CargarNuecesToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.CargarNuecesToolStripButton.Text = "Cargar";
+            this.CargarNuecesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // NuevoNuecesToolStripButton
+            // 
+            this.NuevoNuecesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Nuevo;
+            this.NuevoNuecesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.NuevoNuecesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.NuevoNuecesToolStripButton.Name = "NuevoNuecesToolStripButton";
+            this.NuevoNuecesToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.NuevoNuecesToolStripButton.Text = "Nuevo";
+            this.NuevoNuecesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // BorrarNuecesToolStripButton
+            // 
+            this.BorrarNuecesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Delete;
+            this.BorrarNuecesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.BorrarNuecesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BorrarNuecesToolStripButton.Name = "BorrarNuecesToolStripButton";
+            this.BorrarNuecesToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.BorrarNuecesToolStripButton.Text = "Borrar";
+            this.BorrarNuecesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // EditarNuecesToolStripButton
+            // 
+            this.EditarNuecesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Edit;
+            this.EditarNuecesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.EditarNuecesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.EditarNuecesToolStripButton.Name = "EditarNuecesToolStripButton";
+            this.EditarNuecesToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.EditarNuecesToolStripButton.Text = "Editar";
+            this.EditarNuecesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // OKNuecesToolStripButton
+            // 
+            this.OKNuecesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Aceptar;
+            this.OKNuecesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.OKNuecesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.OKNuecesToolStripButton.Name = "OKNuecesToolStripButton";
+            this.OKNuecesToolStripButton.Size = new System.Drawing.Size(73, 47);
+            this.OKNuecesToolStripButton.Text = "OK";
+            this.OKNuecesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // CancelarNuecesToolStripButton
+            // 
+            this.CancelarNuecesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Cancelar;
+            this.CancelarNuecesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CancelarNuecesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CancelarNuecesToolStripButton.Name = "CancelarNuecesToolStripButton";
+            this.CancelarNuecesToolStripButton.Size = new System.Drawing.Size(73, 47);
+            this.CancelarNuecesToolStripButton.Text = "Cancelar";
+            this.CancelarNuecesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // ImprimirNuecesToolStripButton
+            // 
+            this.ImprimirNuecesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Print;
+            this.ImprimirNuecesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ImprimirNuecesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ImprimirNuecesToolStripButton.Name = "ImprimirNuecesToolStripButton";
+            this.ImprimirNuecesToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.ImprimirNuecesToolStripButton.Text = "Imprimir";
+            this.ImprimirNuecesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // CerrarNuecesToolStripButton
+            // 
+            this.CerrarNuecesToolStripButton.Image = global::AppComercial2021.Windows.Properties.Resources.Close;
+            this.CerrarNuecesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CerrarNuecesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CerrarNuecesToolStripButton.Name = "CerrarNuecesToolStripButton";
+            this.CerrarNuecesToolStripButton.Size = new System.Drawing.Size(73, 59);
+            this.CerrarNuecesToolStripButton.Text = "Cerrar";
+            this.CerrarNuecesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
             // FrmPersonas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -722,7 +637,6 @@ namespace AppComercial2021.Windows
             this.ProvinciasToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProvinciasDataGridView)).EndInit();
             this.LocalidadesTabPage.ResumeLayout(false);
-            this.LocalidadesTabPage.PerformLayout();
             this.LocalidadesToolStrip.ResumeLayout(false);
             this.LocalidadesToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LocalidadesDataGridView)).EndInit();
@@ -756,7 +670,6 @@ namespace AppComercial2021.Windows
         private System.Windows.Forms.TextBox ProvinciaTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage LocalidadesTabPage;
-        private System.Windows.Forms.ComboBox ProvinciasComboBox;
         private System.Windows.Forms.ToolStrip LocalidadesToolStrip;
         private System.Windows.Forms.ToolStripButton CargarLocalidadToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
@@ -764,16 +677,11 @@ namespace AppComercial2021.Windows
         private System.Windows.Forms.ToolStripButton BorrarLocalidadToolStripButton;
         private System.Windows.Forms.ToolStripButton EditarLocalidadToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-        private System.Windows.Forms.ToolStripButton OKLocalidadToolStripButton;
-        private System.Windows.Forms.ToolStripButton CancelarLocalidadToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripButton ImprimirLocalidadToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ToolStripButton CerrarLocalidadToolStripButton;
         private System.Windows.Forms.DataGridView LocalidadesDataGridView;
-        private System.Windows.Forms.TextBox LocalidadTextBox;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TabPage ProveedoresTabPage;
         private System.Windows.Forms.ToolStrip NuecesToolStrip;
         private System.Windows.Forms.ToolStripButton CargarNuecesToolStripButton;

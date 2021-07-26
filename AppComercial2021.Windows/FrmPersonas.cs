@@ -35,10 +35,7 @@ namespace AppComercial2021.Windows
             ManejarBotonesProvincias(true);
             HabilitarTextBoxProvincias(false);
 
-            ManejarBotonesLocalidad(true);
-            HabilitarControlesLocalidad(false);
 
-            HelperCombo.CargarDatosComboProvincias(ref ProvinciasComboBox);
         }
 
 
@@ -281,24 +278,7 @@ namespace AppComercial2021.Windows
 
         #region Código para el manejo de Localidades
 
-        private void ManejarBotonesLocalidad(bool habilitado)
-        {
-            CargarLocalidadToolStripButton.Enabled = habilitado;
-            NuevoLocalidadToolStripButton.Enabled = habilitado;
-            BorrarLocalidadToolStripButton.Enabled = habilitado;
-            EditarLocalidadToolStripButton.Enabled = habilitado;
 
-            OKLocalidadToolStripButton.Enabled = !habilitado;
-            CancelarLocalidadToolStripButton.Enabled = !habilitado;
-            ImprimirLocalidadToolStripButton.Enabled = habilitado;
-            CerrarLocalidadToolStripButton.Enabled = habilitado;
-        }
-
-        private void HabilitarControlesLocalidad(bool habilitar)
-        {
-            LocalidadTextBox.Enabled = habilitar;
-            ProvinciasComboBox.Enabled = habilitar;
-        }
         private void CargarLocalidadToolStripButton_Click(object sender, EventArgs e)
         {
             RellenarGrillaLocalidades();
@@ -334,11 +314,7 @@ namespace AppComercial2021.Windows
         }
         private void NuevoLocalidadToolStripButton_Click(object sender, EventArgs e)
         {
-            operacion = OperacionesBd.Agregar;
-            HabilitarControlesLocalidad(true);
-            ManejarBotonesLocalidad(false);
-            ProvinciaTextBox.Focus();
-
+            
         }
         #endregion
 
