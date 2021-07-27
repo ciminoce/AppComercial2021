@@ -28,10 +28,50 @@ namespace AppComercial2021.Datos
             
         }
 
-        //public bool Existe(Localidad localidad)
-        //{
+        public bool Existe(Localidad localidad)
+        {
+            int registrosEncontrados = 0;
+            try
+            {
+                using (var cn = ConexionBd.GetInstancia().GetConexion())
+                {
 
-        //}
+                    if (localidad.LocalidadId == 0)
+                    {
+                        string cadenaComando = "SELECT COUNT(*) FROM Localidades WHERE NombreLocalidad=@nom AND ProvinciaId=@provId";
+                        using (var comando = new SqlCommand(cadenaComando, cn))
+                        {
+                            comando.Parameters.AddWithValue("@nom", localidad.NombreLocalidad);
+                            comando.Parameters.AddWithValue("@provId", localidad.Provincia.ProvinciaId);
+
+                            registrosEncontrados = (int)comando.ExecuteScalar();
+                        }
+
+                    }
+                    else
+                    {
+                        string cadenaComando = "SELECT COUNT(*) FROM Localidades WHERE NombreLocalidad=@nom AND ProvinciaId=@provId AND LocalidadId<>@locId";
+                        using (var comando = new SqlCommand(cadenaComando, cn))
+                        {
+                            comando.Parameters.AddWithValue("@nom", localidad.NombreLocalidad);
+                            comando.Parameters.AddWithValue("@provId", localidad.Provincia.ProvinciaId);
+                            comando.Parameters.AddWithValue("@locId", localidad.LocalidadId);
+
+
+                            registrosEncontrados = (int)comando.ExecuteScalar();
+                        }
+
+                    }
+                }
+
+                return registrosEncontrados > 0;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+
+        }
         public List<LocalidadDto> GetLista()
         {
             try
@@ -74,20 +114,162 @@ namespace AppComercial2021.Datos
             };
         }
 
-        //public int Agregar(Localidad localidad)
-        //{
+        public int Agregar(Localidad localidad)
+        {
+            int registrosAfectados = 0;
+            try
+            {
+                using (var cn = ConexionBd.GetInstancia().GetConexion())
+                {
+                    string cadenaComando = "INSERT INTO Localidades (NombreLocalidad, ProvinciaId) VALUES (@nom, @provId)";
+                    using (var comando = new SqlCommand(cadenaComando, cn))
+                    {
+                        comando.Parameters.AddWithValue("@nom", localidad.NombreLocalidad);
+                        comando.Parameters.AddWithValue("@provId", localidad.Provincia.ProvinciaId);
 
-        //}
+                        registrosAfectados = comando.ExecuteNonQuery();
+                        if (registrosAfectados > 0)
+                        {
+                            cadenaComando = "SELECT @@IDENTITY";
+                            using (var comandoOutput = new SqlCommand(cadenaComando, cn))
+                            {
+                                localidad.LocalidadId = (int)(decimal)comandoOutput.ExecuteScalar();
 
-        //public int Borrar(Localidad localidad)
-        //{
+                            }
+                            cadenaComando = "SELECT RowVersion FROM Localidades WHERE LocalidadId=@id";
+                            using (var comandoRow = new SqlCommand(cadenaComando, cn))
+                            {
+                                comandoRow.Parameters.AddWithValue("@id", localidad.LocalidadId);
+                                localidad.RowVersion = (byte[])comandoRow.ExecuteScalar();
+                            }
+                        }
 
-        //}
+                    }
+                }
+                return registrosAfectados;
 
-        //public int Editar(Localidad localidad)
-        //{
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
 
-        //}
+        }
 
+        public int Borrar(Localidad localidad)
+        {
+            int registrosAfectados = 0;
+            try
+            {
+                using (var cn = ConexionBd.GetInstancia().GetConexion())
+                {
+                    string cadenaComando = "DELETE FROM Localidades WHERE LocalidadId=@id AND RowVersion=@ver";
+                    using (var comando = new SqlCommand(cadenaComando, cn))
+                    {
+                        comando.Parameters.AddWithValue("@id", localidad.LocalidadId);
+                        comando.Parameters.AddWithValue("@ver", localidad.RowVersion);
+                        registrosAfectados = comando.ExecuteNonQuery();
+                    }
+                }
+                return registrosAfectados;
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+
+        }
+
+        public int Editar(Localidad localidad)
+        {
+            int registrosAfectados = 0;
+            try
+            {
+                using (var cn = ConexionBd.GetInstancia().GetConexion())
+                {
+                    string cadenaComando = "UPDATE Localidades SET NombreLocalidad=@nom, ProvinciaId=@provId WHERE LocalidadId=@id AND RowVersion=@ver";
+                    using (var comando = new SqlCommand(cadenaComando, cn))
+                    {
+                        comando.Parameters.AddWithValue("@nom", localidad.NombreLocalidad);
+                        comando.Parameters.AddWithValue("@provId", localidad.Provincia.ProvinciaId);
+
+                        comando.Parameters.AddWithValue("@id", localidad.LocalidadId);
+                        comando.Parameters.AddWithValue("@ver", localidad.RowVersion);
+
+                        registrosAfectados = comando.ExecuteNonQuery();
+
+                    }
+
+                    if (registrosAfectados > 0)
+                    {
+                        cadenaComando = "SELECT RowVersion FROM Localidades WHERE LocalidadId=@id";
+                        using (var comandoRow = new SqlCommand(cadenaComando, cn))
+                        {
+                            comandoRow.Parameters.AddWithValue("@id", localidad.LocalidadId);
+                            localidad.RowVersion = (byte[])comandoRow.ExecuteScalar();
+                        }
+
+                    }
+                }
+                return registrosAfectados;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+
+            }
+
+        }
+        //TODO:Codificar el método para ver si está relacionado con otra tabla
+        public bool EstaRelacionado(Localidad localidad)
+        {
+            return false;
+        }
+
+        public Localidad GetLocalidadPorId(int id)
+        {
+            Localidad localidad = null;
+            try
+            {
+                using (var cn = ConexionBd.GetInstancia().GetConexion())
+                {
+
+                   
+                    string cadenaComando = "SELECT LocalidadId, NombreLocalidad, ProvinciaId, RowVersion FROM Localidades WHERE LocalidadId=@id";
+                    using (var comando = new SqlCommand(cadenaComando, cn))
+                    {
+                        comando.Parameters.AddWithValue("@id", id);
+
+                        using (var reader=comando.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                reader.Read();
+                                localidad = ConstruirLocalidad(reader);
+                            }
+                        }
+                    }
+
+                }
+
+                return localidad;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        private Localidad ConstruirLocalidad(SqlDataReader reader)
+        {
+            return new Localidad()
+            {
+                LocalidadId = reader.GetInt32(0),
+                NombreLocalidad = reader.GetString(1),
+                Provincia = RepositorioProvincia.GetInstancia().GetProvinciaPorId(reader.GetInt32(2)),
+                RowVersion =(byte[]) reader[3]
+            };
+        }
     }
 }

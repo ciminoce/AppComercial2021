@@ -53,11 +53,11 @@ namespace AppComercial2021.Servicios
             }
         }
 
-        public bool EstaRelacionado(Provincia tipoRelleno)
+        public bool EstaRelacionado(Provincia provincia)
         {
             try
             {
-                return RepositorioProvincia.GetInstancia().EstaRelacionado(tipoRelleno);
+                return RepositorioProvincia.GetInstancia().EstaRelacionado(provincia);
             }
             catch (Exception ex)
             {

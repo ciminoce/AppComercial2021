@@ -314,9 +314,105 @@ namespace AppComercial2021.Windows
         }
         private void NuevoLocalidadToolStripButton_Click(object sender, EventArgs e)
         {
-            
+            FrmLocalidadEdit frm = new FrmLocalidadEdit();
+            DialogResult dr = frm.ShowDialog(this);
+            if (dr==DialogResult.Cancel)
+            {
+                return;
+            }
+
+            try
+            {
+                Localidad localidad = frm.GetLocalidad();
+                if (ServicioLocalidad.GetInstancia().Existe(localidad))
+                {
+                    MessageBox.Show("Registro existente... Alta denegada", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    
+                    return;
+
+                }
+                int registrosGuardados = ServicioLocalidad.GetInstancia().Agregar(localidad);
+                MessageBox.Show($"Se agregaron {registrosGuardados} registro/s", "Mensaje", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                if (registrosGuardados == 0)
+                {
+                    return;
+                }
+
+                LocalidadDto localidadDto = new LocalidadDto()
+                {
+                    LocalidadId = localidad.LocalidadId,
+                    NombreLocalidad = localidad.NombreLocalidad,
+                    NombreProvincia = localidad.Provincia.NombreProvincia
+                };
+
+                r = HelperGrid.ConstruirFila(LocalidadesDataGridView);
+                HelperGrid.SetearFila(r, localidadDto);
+                HelperGrid.AgregarFila(LocalidadesDataGridView, r);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         #endregion
 
+        private void BorrarLocalidadToolStripButton_Click(object sender, EventArgs e)
+        {
+            if (LocalidadesDataGridView.SelectedRows.Count==0)
+            {
+                return;
+            }
+
+            DataGridViewRow r = LocalidadesDataGridView.SelectedRows[0];
+            LocalidadDto localidadDto =(LocalidadDto) r.Tag;
+            try
+            {
+                Localidad localidad = ServicioLocalidad.GetInstancia()
+                    .GetLocalidadPorId(localidadDto.LocalidadId);
+                if (localidad == null)
+                {
+                    MessageBox.Show("Registro Inexistente o borrado por otro usuario...",
+                        "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                DialogResult dr = MessageBox.Show("¿Desea borrar el registro seleccionado?", "Confirmar",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                if (dr == DialogResult.Yes)
+                {
+                    if (!ServicioLocalidad.GetInstancia().EstaRelacionado(localidad))
+                    {
+                        int registrosBorrados = ServicioLocalidad.GetInstancia().Borrar(localidad);
+                        if (registrosBorrados == 0)
+                        {
+                            MessageBox.Show("Registro borrado o modificado por otro usuario", "Advertencia",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            RellenarGrillaLocalidades();
+                            return;
+
+                        }
+
+                        MessageBox.Show($"Se borraron {registrosBorrados} registro/s", "Mensaje", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+
+                        HelperGrid.QuitarFila(LocalidadesDataGridView, r);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Registro relacionado... Baja denegada", "Error", MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

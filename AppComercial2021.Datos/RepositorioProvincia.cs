@@ -105,7 +105,7 @@ namespace AppComercial2021.Datos
                         {
                             while (reader.Read())
                             {
-                                var tipo = ConstruirTipo(reader);
+                                var tipo = ConstruirProvincia(reader);
                                 lista.Add(tipo);
                             }
                         }
@@ -124,7 +124,7 @@ namespace AppComercial2021.Datos
         }
 
 
-        private Provincia ConstruirTipo(SqlDataReader reader)
+        private Provincia ConstruirProvincia(SqlDataReader reader)
         {
             return new Provincia()
             {
@@ -170,10 +170,6 @@ namespace AppComercial2021.Datos
             }
             catch (Exception e)
             {
-                if (e.Message.Contains("IX_"))
-                {
-                    throw new Exception("Registro repetido");
-                }
                 throw new Exception(e.Message);
             }
         }
@@ -198,10 +194,6 @@ namespace AppComercial2021.Datos
             }
             catch (Exception e)
             {
-                if (e.Message.Contains("REFERENCE"))
-                {
-                    throw new Exception("Registro Relacionado... Baja denegada");
-                }
                 throw new Exception(e.Message);
             }
 
@@ -240,14 +232,42 @@ namespace AppComercial2021.Datos
             }
             catch (Exception e)
             {
-                if (e.Message.Contains("IX_"))
-                {
-                    throw new Exception("Registro repetido");
-                }
                 throw new Exception(e.Message);
 
             }
         }
 
+        public Provincia GetProvinciaPorId(int id)
+        {
+            Provincia provincia = null;
+            try
+            {
+                using (var cn = ConexionBd.GetInstancia().GetConexion())
+                {
+                    string cadenaComando = "SELECT ProvinciaId, NombreProvincia, RowVersion FROM Provincias WHERE ProvinciaId=@id";
+                    using (var comando = new SqlCommand(cadenaComando, cn))
+                    {
+                        comando.Parameters.AddWithValue("@id", id);
+
+                        using (var reader = comando.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                reader.Read();
+                                provincia = ConstruirProvincia(reader);
+                            }
+                        }
+                    }
+
+                }
+
+                return provincia;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+
+        }
     }
 }

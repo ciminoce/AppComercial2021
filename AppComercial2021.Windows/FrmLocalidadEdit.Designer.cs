@@ -29,13 +29,16 @@ namespace AppComercial2021.Windows
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TareaLabel = new System.Windows.Forms.Label();
             this.ProvinciasComboBox = new System.Windows.Forms.ComboBox();
             this.LocalidadTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.OkButton = new System.Windows.Forms.Button();
+            this.CancelarButton = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // TareaLabel
@@ -85,35 +88,41 @@ namespace AppComercial2021.Windows
             this.label3.TabIndex = 14;
             this.label3.Text = "Provincia:";
             // 
-            // button1
+            // OkButton
             // 
-            this.button1.Image = global::AppComercial2021.Windows.Properties.Resources.Aceptar;
-            this.button1.Location = new System.Drawing.Point(41, 154);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 56);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "OK";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.OkButton.Image = global::AppComercial2021.Windows.Properties.Resources.Aceptar;
+            this.OkButton.Location = new System.Drawing.Point(41, 154);
+            this.OkButton.Name = "OkButton";
+            this.OkButton.Size = new System.Drawing.Size(110, 56);
+            this.OkButton.TabIndex = 17;
+            this.OkButton.Text = "OK";
+            this.OkButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.OkButton.UseVisualStyleBackColor = true;
+            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
-            // button2
+            // CancelarButton
             // 
-            this.button2.Image = global::AppComercial2021.Windows.Properties.Resources.Cancelar;
-            this.button2.Location = new System.Drawing.Point(302, 154);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 56);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Cancelar";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.CancelarButton.Image = global::AppComercial2021.Windows.Properties.Resources.Cancelar;
+            this.CancelarButton.Location = new System.Drawing.Point(302, 154);
+            this.CancelarButton.Name = "CancelarButton";
+            this.CancelarButton.Size = new System.Drawing.Size(110, 56);
+            this.CancelarButton.TabIndex = 17;
+            this.CancelarButton.Text = "Cancelar";
+            this.CancelarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.CancelarButton.UseVisualStyleBackColor = true;
+            this.CancelarButton.Click += new System.EventHandler(this.CancelarButton_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // FrmLocalidadEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(486, 243);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.CancelarButton);
+            this.Controls.Add(this.OkButton);
             this.Controls.Add(this.ProvinciasComboBox);
             this.Controls.Add(this.LocalidadTextBox);
             this.Controls.Add(this.label5);
@@ -123,19 +132,20 @@ namespace AppComercial2021.Windows
             this.Name = "FrmLocalidadEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLocalidadEdit";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label TareaLabel;
         private System.Windows.Forms.ComboBox ProvinciasComboBox;
         private System.Windows.Forms.TextBox LocalidadTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button OkButton;
+        private System.Windows.Forms.Button CancelarButton;
+        private System.Windows.Forms.Label TareaLabel;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -30,10 +30,11 @@ namespace AppComercial2021.Windows
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LocalidadesTabControl = new System.Windows.Forms.TabControl();
             this.ProvinciasTabPage = new System.Windows.Forms.TabPage();
             this.ProvinciasToolStrip = new System.Windows.Forms.ToolStrip();
@@ -175,8 +176,8 @@ namespace AppComercial2021.Windows
             this.ProvinciasDataGridView.AllowUserToDeleteRows = false;
             this.ProvinciasDataGridView.AllowUserToResizeColumns = false;
             this.ProvinciasDataGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ProvinciasDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ProvinciasDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.ProvinciasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProvinciasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colProvincia});
@@ -191,8 +192,8 @@ namespace AppComercial2021.Windows
             // colProvincia
             // 
             this.colProvincia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colProvincia.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colProvincia.DefaultCellStyle = dataGridViewCellStyle10;
             this.colProvincia.HeaderText = "Provincia";
             this.colProvincia.Name = "colProvincia";
             this.colProvincia.ReadOnly = true;
@@ -271,12 +272,20 @@ namespace AppComercial2021.Windows
             // 
             this.LocalidadesDataGridView.AllowUserToAddRows = false;
             this.LocalidadesDataGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.LocalidadesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.LocalidadesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.LocalidadesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.LocalidadesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colLocalidad,
             this.colProvinciaLocalidad});
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.LocalidadesDataGridView.DefaultCellStyle = dataGridViewCellStyle8;
             this.LocalidadesDataGridView.Location = new System.Drawing.Point(51, 21);
             this.LocalidadesDataGridView.MultiSelect = false;
             this.LocalidadesDataGridView.Name = "LocalidadesDataGridView";
@@ -288,8 +297,8 @@ namespace AppComercial2021.Windows
             // colLocalidad
             // 
             this.colLocalidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colLocalidad.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colLocalidad.DefaultCellStyle = dataGridViewCellStyle7;
             this.colLocalidad.HeaderText = "Localidad";
             this.colLocalidad.Name = "colLocalidad";
             this.colLocalidad.ReadOnly = true;
@@ -507,6 +516,7 @@ namespace AppComercial2021.Windows
             this.BorrarLocalidadToolStripButton.Size = new System.Drawing.Size(73, 59);
             this.BorrarLocalidadToolStripButton.Text = "Borrar";
             this.BorrarLocalidadToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BorrarLocalidadToolStripButton.Click += new System.EventHandler(this.BorrarLocalidadToolStripButton_Click);
             // 
             // EditarLocalidadToolStripButton
             // 
