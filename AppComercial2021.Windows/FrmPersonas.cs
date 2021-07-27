@@ -414,5 +414,60 @@ namespace AppComercial2021.Windows
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void EditarLocalidadToolStripButton_Click(object sender, EventArgs e)
+        {
+            if (LocalidadesDataGridView.SelectedRows.Count==0)
+            {
+                return;
+            }
+
+            DataGridViewRow r = LocalidadesDataGridView.SelectedRows[0];
+            LocalidadDto localidadDto = (LocalidadDto) r.Tag;
+            Localidad localidad = ServicioLocalidad.GetInstancia()
+                .GetLocalidadPorId(localidadDto.LocalidadId);
+            FrmLocalidadEdit frm = new FrmLocalidadEdit();
+            frm.SetLocalidad(localidad);
+            DialogResult dr = frm.ShowDialog(this);
+            if (dr==DialogResult.Cancel)
+            {
+                return;
+            }
+
+            try
+            {
+                localidad = frm.GetLocalidad();
+                if (ServicioLocalidad.GetInstancia().Existe(localidad))
+                {
+                    MessageBox.Show("Registro existente... Edición denegada", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    return;
+
+                }
+
+                int registrosGuardados = ServicioLocalidad.GetInstancia().Editar(localidad);
+                if (registrosGuardados == 0)
+                {
+                    MessageBox.Show("Registro borrado o modificado por otro usuario", "Advertencia",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    RellenarGrillaLocalidades();
+                    return;
+
+                }
+                MessageBox.Show($"Se editaron {registrosGuardados} registro/s", "Mensaje", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+
+                localidadDto.NombreLocalidad = localidad.NombreLocalidad;
+                localidadDto.NombreProvincia = localidad.Provincia.NombreProvincia;
+                HelperGrid.SetearFila(r,localidadDto);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
     }
 }

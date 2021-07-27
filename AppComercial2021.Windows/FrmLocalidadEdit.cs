@@ -31,6 +31,8 @@ namespace AppComercial2021.Windows
             else
             {
                 TareaLabel.Text = "Editar Localidad";
+                LocalidadTextBox.Text = localidad.NombreLocalidad;
+                ProvinciasComboBox.SelectedValue = localidad.Provincia.ProvinciaId;
             }
 
         }
@@ -77,6 +79,11 @@ namespace AppComercial2021.Windows
         public Localidad GetLocalidad()
         {
             return localidad;
+        }
+
+        public void SetLocalidad(Localidad localidad)
+        {
+            this.localidad = localidad;
         }
     }
 }
